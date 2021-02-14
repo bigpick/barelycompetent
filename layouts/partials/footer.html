@@ -1,0 +1,25 @@
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; {{ now.Format "2006" }}</span>
+            {{ if .Site.Author.name }}
+                <span><a href="https://github.com/bigpick">{{ .Site.Author.name }}</a></span>
+            {{ end }}
+            {{ if .Site.Copyright }}
+                <span>{{ .Site.Copyright| safeHTML }}</span>
+            {{ end }}
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>{{ .Site.Params.footerRight | default "Inspired by <a href=\"https://github.com/rhazdon/hugo-theme-hello-friend-ng\">rhazdon</a>" | safeHTML }}</span>
+            <span>{{ .Site.Params.footerLeft | default "Powered by <a href=\"http://gohugo.io\">Hugo</a>" | safeHTML }}</span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content__disclaimer">
+            <span style="display:block">{{ .Site.Params.footerBottom | default "" | safeHTML }}</span>
+        </div>
+    </div>
+
+</footer>

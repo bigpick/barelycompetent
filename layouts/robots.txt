@@ -1,0 +1,9 @@
+# This isn't a noob CTF; no flags here...
+Sitemap: https://barelycompetent.dev/sitemap.xml
+
+# Any bot 'cept googlebot can f off
+User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+Allow: /

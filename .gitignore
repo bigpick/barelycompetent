@@ -1,6 +1,7 @@
 # Hugo
 ## Hugo output directory
 public/
+resources/_gen/
 ## OS Files
 # Windows
 Thumbs.db
