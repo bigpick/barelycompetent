@@ -133,7 +133,7 @@ disableHugoGeneratorInject = false
 
   [[params.social]]
     name = "email"
-    url  = "mailto:imthe@barelycompetent.dev"
+    url  = "mailto:george.pickering.site@gmail.com"
 
 
 [languages]
