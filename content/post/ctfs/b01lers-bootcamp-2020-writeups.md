@@ -6,8 +6,6 @@ categories:
  - Capture The Flag Writeups
 ---
 
-# pwnable.kr: Intro to MD5 Collisions
-
 > Welcome to b01lers bootcamp CTF! b01lers CTF bootcamp is a brand-new super-introductory CTF for beginners. It is also a training camp! Check out the training at https://ctf.b01lers.com, join our Discord, and learn, then come back to compete!
 
 Be sure to check out my [Crypto World specific writeup](https://bigpick.github.io/TodayILearned/articles/2020-10/cryptoworld-b01lersbootcamp) for the tasks related to that sub-world as part of this CTF!

@@ -1,6 +1,5 @@
 {{ define "main" }}
     <main class="post">
-        <button onclick="topFunction()" id="scrollTopButton" title="Back to top">Back to Top</button>
 
         <div class="post-info">
             {{ if .IsTranslated }}
@@ -13,8 +12,18 @@
         </div>
 
         <article>
-            <!-- <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2> -->
+            <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
 
+            {{ if .Params.Cover }}
+                <figure class="post-cover">
+                    <img src="{{ .Params.Cover | absURL }}" alt="{{ .Title }}" />
+                
+                    {{ if .Params.CoverCaption }}
+                        <figcaption class="center">{{ .Params.CoverCaption | markdownify }}</figcaption>
+                    {{ end }}
+                </figure>
+            {{ end }}
+            
             {{ if .Params.toc }}
                 <hr />
                 <aside id="toc">
@@ -22,10 +31,6 @@
                     {{ .TableOfContents }}
                 </aside>
                 <hr />
-            {{ end }}
-
-            {{ with .Params.Cover }}
-                <img src="{{ . | relURL }}" class="post-cover" />
             {{ end }}
 
             <div class="post-content">

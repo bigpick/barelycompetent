@@ -302,8 +302,8 @@ h4 {
 /* Underline links with color */
 p a {
   text-decoration-color: $cyan;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
 
   &:hover {
     color: $cyan;
@@ -312,8 +312,8 @@ p a {
 
 li a {
   text-decoration-color: $cyan;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
 
   &:not(nav > ul > li > a):hover {
     color: $cyan;
@@ -485,7 +485,6 @@ blockquote {
     stroke: $cyan;
   }
 }
-
 
 /*
  * ==============================================
@@ -679,9 +678,12 @@ div.code-toolbar > .toolbar button:focus,
 div.code-toolbar > .toolbar span:hover,
 div.code-toolbar > .toolbar span:focus
 {
-  color: inherit;
+  color: $foreground;
   text-decoration: none;
-  background-color: var(--green);
+  background-color: var(--background);
+  border: 1px;
+  border-style: solid;
+  border-color: $comment;
 }
 
 /* Remove text shadow for printing */
