@@ -193,5 +193,28 @@ Stopped: Wed May  5 17:51:32 2021
 
 benchmark-all:
 
+1. Random issue with:
+
 ```
+Hashmode: 1100 - Domain Cached Credentials (DCC), MS Cache
+
+* Device #1: ATTENTION! OpenCL kernel self-test failed.
+
+Your device driver installation is probably broken.
+See also: https://hashcat.net/faq/wrongdriver
+
+```
+
+2. Originally, died on
+
+```
+* Device #1: Skipping hash-mode 17200 - known CUDA/OpenCL Runtime/Driver issue (not a hashcat issue)
+             You can use --force to override, but do not report related errors.
+```
+
+so re-ran full suite with the `--force` flag.
+
+
+```bash
+# still running
 ```
