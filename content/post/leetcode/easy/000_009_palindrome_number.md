@@ -27,7 +27,8 @@ tags:
 
 ## Accepted Solution
 
-{{< github repo="bigpick/leetcode" file="/easy/000_009_palindrome_number.py" lang="python" options="linenos=true" >}}
+### Python
+{{< github repo="bigpick/leetcode" file="/easy/python/000_009_palindrome_number/solution.py" lang="python" options="linenos=true" >}}
 
 > Runtime: 56 ms, faster than 79.53% of Python3 online submissions for Palindrome Number.
 >

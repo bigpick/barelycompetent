@@ -54,11 +54,16 @@ A more general approach that seems should work is the following:
   * idx += 1
 * Return total
 
-## Accepted Solution
+## Accepted Solutions
 
-{{< github repo="bigpick/leetcode" file="/easy/000_013_roman_to_integer.py" lang="python" options="linenos=true" >}}
+### Python
+{{< github repo="bigpick/leetcode" file="/easy/python/000_013_roman_to_integer/solution.py" lang="python" options="linenos=true" >}}
 
 > Runtime: 44 ms, faster than 82.58% of Python3 online submissions for Roman to Integer.
 >
 > Memory Usage: 14.1 MB, less than 94.52% of Python3 online submissions for Roman to Integer.
+
+### Rust
+{{< github repo="bigpick/leetcode" file="/easy/rust/src/_000_013_roman_to_integer/solution.rs" lang="python" options="linenos=true" >}}
+
 

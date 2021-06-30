@@ -22,7 +22,8 @@ Using python, convert the given value to a `str`, so that we can use a slice to 
 
 ## Accepted Solution
 
-{{< github repo="bigpick/leetcode" file="/easy/000_007_reverse_integer.py" lang="python" options="linenos=true" >}}
+### Python
+{{< github repo="bigpick/leetcode" file="/easy/python/000_007_reverse_integer/solution.py" lang="python" options="linenos=true" >}}
 
 > * Runtime: 20 ms, faster than 99.48% of Python3 online submissions for Reverse Integer.
 >
