@@ -155,3 +155,8 @@ The current appearance of the site is what I've settled on after taking a more a
 I hope you enjoy the new look! (p.s. if you _do_, maybe you'll consider getting in on all things [Dracula UI](https://draculatheme.com/ui) 🧛 ?)
 
 Happy hacking!
+
+
+{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" resizeOptions="600x600 q90 Lanczos" showExif=false previewType="blur" thumbnailHoverEffect="enlarge" embedPreview="true" loadJQuery="true">}}
+
+

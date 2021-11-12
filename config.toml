@@ -1,7 +1,7 @@
 baseURL = "/"
 title   = "Barely Competent Dev"
 languageCode = "en-us"
-theme = "hello-friend-ng"
+theme = ["hello-friend-ng", "hugo-shortcode-gallery"]
 
 PygmentsCodeFences = true
 PygmentsStyle = "dracula"
