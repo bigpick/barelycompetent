@@ -107,7 +107,7 @@ L(back) = (0.2126*((((68/255)+.055)/1.055))^2.4)+(0.7152*((((71/255)+.055)/1.055
 L(fore) = (0.2126*((((40/255)+.055)/1.055))^2.4)+(0.7152*((((42/255)+.055)/1.055)^2.4))+(0.0722*((((54/255)+.055)/1.055)^2.4)) = 0.0237338674155
 ```
 
-Now that we have L(fore) and L(back), we can calculate the contrast, using L(fore) as L(1) as it's the lighter color:
+Now that we have `L(fore)` and `L(back)`, we can calculate the contrast, using `L(fore)` as `L(1)` as it's the lighter color:
 
 ```text
 (0.0647360522131 + .05) / (0.0237338674155 + .05)
@@ -148,7 +148,7 @@ Well, as you can see, it all fails. Basically, the only even-minimally compliant
 {{< image src="/img/wcag/original_site_page_subheader.png" alt="original_site_page_subheader.png" position="center" style="border-radius: 8px;" >}}
 
 
-So I definitely could have done a better job at choosing colors. In trying to stick to the Dracula spec exactly, I ended up with carying combinations of text that just wasn't easy enough to read for most people.
+So I definitely could have done a better job at choosing colors. In trying to stick to the Dracula spec exactly, I ended up with various combinations of text that just wasn't easy enough to read for most people.
 
 The current appearance of the site is what I've settled on after taking a more accesibility-focused approach at color choices. I've tried to stick true to the Dracula color design, except this time, made sure to think of contrast from the start of the process.
 
@@ -156,7 +156,19 @@ I hope you enjoy the new look! (p.s. if you _do_, maybe you'll consider getting 
 
 Happy hacking!
 
+---
 
-{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" resizeOptions="600x600 q90 Lanczos" showExif=false previewType="blur" thumbnailHoverEffect="enlarge" embedPreview="true" loadJQuery="true">}}
+### Original site design (gallery)
+
+For historical reference, here's some shots of what the site originally looked like.
+
+Click an image and navigate left/right with arrow keys or mouse to view enlarged/fullsized copies in lightbox (Esc key to close, or click "X" in the box).
+
+{{< gallery match="images/*" sortOrder="asc" rowHeight="150" margins="5" resizeOptions="600x600 q90 Lanczos" showExif=false previewType="blur" thumbnailHoverEffect="enlarge" embedPreview="true" loadJQuery="true">}}
+
+### New site design (gallery)
+
+... and for comparison, here's some shots of what the site now looks like:
 
 
+{{< gallery match="new_images/*" sortOrder="asc" rowHeight="150" margins="5" resizeOptions="600x600 q90 Lanczos" showExif=false previewType="blur" thumbnailHoverEffect="enlarge" embedPreview="true" loadJQuery="true">}}

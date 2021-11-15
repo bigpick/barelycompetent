@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@import "./_gradients";
+@import "./_gradienttext";
+
 /*
  * ==============================================
  * Fonts
@@ -15,12 +18,46 @@
        url("../fonts/iosevka-term-regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Iosevka Slab';
+  font-style:  normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url("../fonts/iosevka-slab-regular.woff2") format("woff2"),
+       url("../fonts/iosevka-slab-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style:  normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url("../fonts/Comfortaa-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Staatliches';
+  font-style:  normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url("../fonts/Staatliches-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Slabo';
+  font-style:  normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url("../fonts/Slabo27px-Regular.ttf") format("truetype");
+}
+
 /*
  * ==============================================
  * Colors (from Dracula theme, mostly)
  * ==============================================
  */
-$background: #282a36;
+//$background: #282a36;
+$background: #1d1e26;
 $code-dark-bg: #252733;
 $curr-line: #44475a;
 $foreground: #f8f8f2;
@@ -32,19 +69,26 @@ $pink: #ff79c6;
 $purple: #bd93f9;
 $red: #ff5555;
 $yellow: #f1fa8c;
+$drac-black: #15171b;
+$drac-quote: #8A8F98;
 
 $dark-background: $background;
-$dark-background-secondary: $curr-line;
-$dark-color: #6C6F82;
+$dark-background-secondary: $drac-black;
+$dark-color: #f8f8f2;
 $dark-color-secondary: #585B6E;
 $dark-border-color: $curr-line;
 /* light theme color  -- Dracula hates the light */
 $light-background: $dark-background;
 $light-background-secondary: $dark-background-secondary;
-$light-color: $dark-color;
+$light-color: #f8f8f2;
 $light-color-secondary: $dark-color-secondary;
 $light-border-color: $dark-border-color;
 
+body {
+  font-family: "Slabo", "Iosevka Slab", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
+  font-weight: 400 !important;
+  font-size: 1.2rem;
+}
 
 ::selection {
   background: $purple; /* WebKit/Blink Browsers */
@@ -215,11 +259,11 @@ button, .button, a.button {
  * ==============================================
  */
 .footer {
-  color: $curr-line;
+  color: $drac-quote;
 
   &__content {
     font-size: .7rem;
-    color: $curr-line;
+    color: $drac-quote;
 
     &__disclaimer {
       font-size: .6rem;
@@ -233,14 +277,16 @@ button, .button, a.button {
  * ==============================================
  */
 .header {
-  background: #44475a;
+  background: #15171b;
 
   .dark-theme & {
-    background: #44475a;
+    background: #15171b;
   }
 
+  color: #f8f8f2;
+
   .theme-toggler {
-    fill: $background;
+    fill: #f8f8f2;
 
     .dark-theme & {
       fill: $foreground;
@@ -260,6 +306,10 @@ button, .button, a.button {
       border-bottom: 1px $curr-line dashed;
     }
   }
+
+  .post-title{
+    font-size: 1.3rem;
+  }
 }
 
 
@@ -270,18 +320,18 @@ button, .button, a.button {
  */
 .logo {
   &__mark {
-    color: $background;
+    color: $foreground;
   }
 
   &__text {
-    color: $background;
+    color: $foreground;
   }
 
   &__cursor {
     background: $green;
 
     .dark-theme & {
-        background: $background;
+        background: $foreground;
     }
   }
 }
@@ -299,15 +349,23 @@ body {
 /* Dracula rainbow headers */
 h1 {
   color: $yellow;
+  font-family: "Staatliches";
 }
 h2 {
   color: $purple;
+  font-family: "Staatliches";
 }
 h3 {
   color: $pink;
+  font-family: "Staatliches";
 }
 h4 {
+  font-family: "Staatliches";
   color: $green;
+}
+h5 {
+  color: #f8f8f2;
+  font-family: "Staatliches";
 }
 /* Underline links with color */
 p a {
@@ -366,7 +424,7 @@ pre {
 }
 
 blockquote {
-  color: $curr-line;
+  color: $drac-quote;
 }
 
 /**
@@ -392,7 +450,7 @@ blockquote {
   }
 
   &__inner {
-    color: $background;
+    color: #8a8f98;
     font-size: 1.1em;
 
     li {
@@ -525,10 +583,10 @@ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascr
 
 :root
 {
-  --background: #282A36;
+  --background: #1d1e26;
   --comment:    #6272A4;
   --foreground: #F8F8F2;
-  --selection:  #44475A;
+  --selection:  #8A8F98;
 
   --cyan:       #8BE9FD;
   --green:      #50FA7B;
@@ -715,6 +773,7 @@ pre[class*="language-"]
   text-shadow: none;
   font-family: Iosevka, PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     monospace;
+  font-size: .95rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -731,6 +790,7 @@ pre[class*="language-"]
   -ms-hyphens: none;
   hyphens: none;
 }
+
 
 /* Code blocks */
 
