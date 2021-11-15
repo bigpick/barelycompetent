@@ -45,7 +45,6 @@ disableHugoGeneratorInject = false
 [taxonomies]
   tag      = "tags"
   category = "categories"
-  series   = "series"
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -80,7 +79,8 @@ disableHugoGeneratorInject = false
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
   #
   customCSS = []
-  customJS  = ["/js/button.js", "/js/prism.js", "/js/theme.js"]
+  #customJS  = ["/js/button.js", "/js/prism.js", "/js/theme.js"]
+  customJS  = ["/js/button.js"]
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   #
