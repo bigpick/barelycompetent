@@ -1907,7 +1907,7 @@ On this website, we find this gem:
 
 So, we know we seem to be working with an Ave-Maria cipher. They also provide an image of how to decode the ciphertext to plaintext on that site:
 
-{{< image src="http://img.geocaching.com/cache/acaf9a80-ca23-4bd5-a4f5-94759d5a9eb7.jpg" alt="ave-maria-cipher.jpg" >}}
+{{< image src="https://s3.amazonaws.com/gs-geo-images/acaf9a80-ca23-4bd5-a4f5-94759d5a9eb7.jpg" alt="ave-maria-cipher.jpg" >}}
 
 &nbsp;
 
