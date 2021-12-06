@@ -418,6 +418,7 @@ pre {
   background: $code-dark-bg;
 
   code {
+    font-size: .9rem;
     color: $foreground;
 
     .dark-theme & {

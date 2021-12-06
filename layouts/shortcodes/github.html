@@ -1,3 +1,16 @@
 {{ $dataJ := getJSON "https://api.github.com/repos/"  (.Get "repo")  "/contents/"  (.Get "file")  }}
 {{ $con := base64Decode $dataJ.content }}
-{{ highlight $con (.Get "lang") (.Get "options") }}
+{{ if ne (.Get "lines") "" }}
+  {{ $split_up := split $con "\n" }}
+  {{ $line_indices := split (.Get "lines") "-" }}
+  {{ $start_index := int (index $line_indices 0) }}
+  {{ $end_index := int (index $line_indices 1) }}
+  {{ $to_highlight := slice "" }}
+  {{ range $idx := (seq (sub $start_index 1) $end_index) }}
+    {{ $to_highlight = $to_highlight | append (index $split_up $idx) }}
+  {{ end }}
+  {{ $joined_to_highlight := trim (delimit $to_highlight "\n") "\n" }}
+  {{ highlight $joined_to_highlight (.Get "lang") (.Get "options") }}
+{{ else }}
+  {{ highlight $con (.Get "lang") (.Get "options") }}
+{{ end }}
