@@ -154,9 +154,9 @@ The pseudo code is laid out above, and is pretty straightforward. It's just a si
 
 ### Day 1:1 solution
 
-(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/day_01/depth_measurement.py)) -- Lines 15-24 (i.e function **`find_increasing_depths`**) is the solution. 
+(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/python/day_01/depth_measurement.py)) -- Lines 15-24 (i.e function **`find_increasing_depths`**) is the solution.
 
-{{< github repo="bigpick/advent-of-code" file="/2021/day_01/depth_measurement.py" lines="15-29" lang="python" options="linenostart=15,linenos=true" >}}
+{{< github repo="bigpick/advent-of-code" file="/2021/python/day_01/depth_measurement.py" lines="15-29" lang="python" options="linenostart=15,linenos=true" >}}
 
 Running the above with our given challenge prompt file, we get `1215` as our answer:
 
@@ -225,9 +225,9 @@ Then, we can just compute the sums of each of those, and then use the original `
 
 ### Day 1:2 solution
 
-(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/day_01/depth_measurement.py)) -- Lines 32-43 (i.e function **`produce_windows` in combination with the above `find_increasing_depths`**) is the solution.
+(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/python/day_01/depth_measurement.py)) -- Lines 32-43 (i.e function **`produce_windows` in combination with the above `find_increasing_depths`**) is the solution.
 
-{{< github repo="bigpick/advent-of-code" file="/2021/day_01/depth_measurement.py" lines="32-43" lang="python" options="linenostart=32,linenos=true" >}}
+{{< github repo="bigpick/advent-of-code" file="/2021/python/day_01/depth_measurement.py" lines="32-43" lang="python" options="linenostart=32,linenos=true" >}}
 
 Running the above with our given challenge prompt file, we get `1215` as our answer:
 
@@ -248,6 +248,6 @@ Woo! Day one down. Come back to check out tomorrow's solution!
 
 ### Full solution code
 
-(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/day_01/depth_measurement.py)):
+(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/python/day_01/depth_measurement.py)):
 
-{{< github repo="bigpick/advent-of-code" file="/2021/day_01/depth_measurement.py" lang="python" options="linenos=true" >}}
+{{< github repo="bigpick/advent-of-code" file="/2021/python/day_01/depth_measurement.py" lang="python" options="linenos=true" >}}

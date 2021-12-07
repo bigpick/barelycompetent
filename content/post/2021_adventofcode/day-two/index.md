@@ -65,9 +65,9 @@ Since Python [recently](https://docs.python.org/3/whatsnew/3.10.html) introduced
 
 ### Day 2:1 solution
 
-(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/day_02/movement_control.py)) -- Lines 13-36 (i.e function **`handle_movements`**) is the solution.
+(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/python/day_02/movement_control.py)) -- Lines 13-36 (i.e function **`handle_movements`**) is the solution.
 
-{{< github repo="bigpick/advent-of-code" file="/2021/day_02/movement_control.py" lines="13-36" lang="python" options="linenostart=13,linenos=true" >}}
+{{< github repo="bigpick/advent-of-code" file="/2021/python/day_02/movement_control.py" lines="13-36" lang="python" options="linenostart=13,linenos=true" >}}
 
 Running the above with our given challenge prompt file, we get `1451208` as our answer:
 
@@ -99,9 +99,9 @@ The process for finding our movement is still simple, and I decided to use patte
 
 ### Day 2:2 solution
 
-(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/day_02/movement_control.py)) -- Lines 39-56 (i.e function **`handle_movements_with_aim`**).
+(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/python/day_02/movement_control.py)) -- Lines 39-56 (i.e function **`handle_movements_with_aim`**).
 
-{{< github repo="bigpick/advent-of-code" file="/2021/day_02/movement_control.py" lines="39-56" lang="python" options="linenostart=39,linenos=true" >}}
+{{< github repo="bigpick/advent-of-code" file="/2021/python/day_02/movement_control.py" lines="39-56" lang="python" options="linenostart=39,linenos=true" >}}
 
 Running the above with our given challenge prompt file, we get `1215` as our answer:
 
@@ -122,6 +122,6 @@ Woo! Day two down. Come back to check out tomorrow's solution!
 
 ### Full solution code
 
-(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/day_02/movement_control.py)):
+(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/python/day_02/movement_control.py)):
 
-{{< github repo="bigpick/advent-of-code" file="/2021/day_02/movement_control.py" lang="python" options="linenos=true" >}}
+{{< github repo="bigpick/advent-of-code" file="/2021/python/day_02/movement_control.py" lang="python" options="linenos=true" >}}
