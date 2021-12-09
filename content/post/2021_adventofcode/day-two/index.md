@@ -72,8 +72,9 @@ Since Python [recently](https://docs.python.org/3/whatsnew/3.10.html) introduced
 Running the above with our given challenge prompt file, we get `1451208` as our answer:
 
 ```bash
-./movement_control.py --chall-input day_2_input.txt
+./movement_control.py --chall-input inputs/day_02.txt
 Day 2 part 1: 1451208
+...
 ```
 
 Which is accepted successfully on submission:
@@ -103,10 +104,10 @@ The process for finding our movement is still simple, and I decided to use patte
 
 {{< github repo="bigpick/advent-of-code" file="/2021/python/day_02/movement_control.py" lines="39-56" lang="python" options="linenostart=39,linenos=true" >}}
 
-Running the above with our given challenge prompt file, we get `1215` as our answer:
+Running the above with our given challenge prompt file, we get `1620141160` as our answer:
 
 ```bash
-./movement_control.py --chall-input day_2_input.txt
+./movement_control.py --chall-input inputs/day_02.txt
 ...
 Day 2 part 1: 1620141160
 ```

@@ -161,8 +161,8 @@ The pseudo code is laid out above, and is pretty straightforward. It's just a si
 Running the above with our given challenge prompt file, we get `1215` as our answer:
 
 ```bash
-./depth_measurement.py --chall-input day_1_part1_input.txt
-1215
+./depth_measurement.py --chall-input day_01.txt
+Day 1: Part 1: 1215
 ```
 
 Which is accepted successfully on submission:
@@ -229,11 +229,12 @@ Then, we can just compute the sums of each of those, and then use the original `
 
 {{< github repo="bigpick/advent-of-code" file="/2021/python/day_01/depth_measurement.py" lines="32-43" lang="python" options="linenostart=32,linenos=true" >}}
 
-Running the above with our given challenge prompt file, we get `1215` as our answer:
+Running the above with our given challenge prompt file, we get `1150` as our answer:
 
 ```bash
-./depth_measurement.py --chall-input day_1_part1_input.txt
-1215
+./depth_measurement.py --chall-input inputs/day_01.txt
+...
+Day 1: Part 2: 1150
 ```
 
 Which is accepted successfully on submission:
@@ -248,6 +249,16 @@ Woo! Day one down. Come back to check out tomorrow's solution!
 
 ### Full solution code
 
+#### Python
+
 (as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/python/day_01/depth_measurement.py)):
 
 {{< github repo="bigpick/advent-of-code" file="/2021/python/day_01/depth_measurement.py" lang="python" options="linenos=true" >}}
+
+#### Scala
+
+(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/scala/src/main/scala/adventofcode/Day01.scala)):
+
+{{< github repo="bigpick/advent-of-code" file="/2021/scala/src/main/scala/adventofcode/Day01.scala" lang="scala" options="linenos=true" >}}
+
+
