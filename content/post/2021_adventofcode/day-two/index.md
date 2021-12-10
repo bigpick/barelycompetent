@@ -123,6 +123,15 @@ Woo! Day two down. Come back to check out tomorrow's solution!
 
 ### Full solution code
 
+#### Python
+
 (as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/python/day_02/movement_control.py)):
 
 {{< github repo="bigpick/advent-of-code" file="/2021/python/day_02/movement_control.py" lang="python" options="linenos=true" >}}
+
+
+#### Scala
+
+(as embedded from [here](https://github.com/bigpick/advent-of-code/blob/main/2021/scala/src/main/scala/adventofcode/Day02.scala)):
+
+{{< github repo="bigpick/advent-of-code" file="/2021/scala/src/main/scala/adventofcode/Day02.scala" lang="scala" options="linenos=true" >}}
