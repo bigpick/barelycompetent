@@ -4,6 +4,7 @@ languageCode = "en-us"
 theme = ["hello-friend-ng", "hugo-shortcode-gallery"]
 
 PygmentsCodeFences = true
+pygmentsCodefences = true
 PygmentsStyle = "dracula"
 
 paginate  = 10

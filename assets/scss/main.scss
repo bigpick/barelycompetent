@@ -416,10 +416,10 @@ code {
 
 pre {
   background: $code-dark-bg;
-
   code {
     font-size: .9rem;
     color: $foreground;
+    line-height: 1.2rem !important;
 
     .dark-theme & {
       color: $foreground;
@@ -624,4 +624,5 @@ pre[class*="language-"]
 }
 
 // Make no borders around code blocks
-.highlight table, .highlight tr, .highlight td { border-spacing: 0; border-collapse: separate; padding: 0 }
+.highlight table, .highlight tr, .highlight td { line-height: 1.2rem !important; border-spacing: 0; border-collapse: separate; padding: 0; }
+.highlight div { overflow: auto; }
