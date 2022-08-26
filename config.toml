@@ -58,7 +58,7 @@ disableHugoGeneratorInject = false
   keywords = "code, blog, hack, hacking, coder, ctf, ctfs, writeups, tools, cybersecurity"
   images = [""]
 
-  homeSubtitle = "It's me, GP."
+  homeSubtitle = "... but you can call me GP."
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   #
@@ -92,8 +92,8 @@ disableHugoGeneratorInject = false
   defaultTheme = "dark"
   themeColor = "#ff79c6"
 
-  # Custom footer 
-  # If you want, you can easily override the default footer with your own content. 
+  # Custom footer
+  # If you want, you can easily override the default footer with your own content.
   #
   footerLeft = "Powered by <a href=\"http://gohugo.io\">Hugo</a>"
   footerRight = "Inspired by <a href=\"https://github.com/rhazdon/hugo-theme-hello-friend-ng\">rhazdon</a>"
