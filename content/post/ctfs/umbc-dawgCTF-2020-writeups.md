@@ -3,7 +3,10 @@ title: "University of Maryland, Baltimore County: UMBC DawgCTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 UMBC DawgCTF capture the flag competition."
 date: 2020-04-10T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/umbc-dawg-writeups"
+tags:
+ - ctfs
 ---
 
 # University of Maryland Baltimore County (UMBC) DawgCTF 2020

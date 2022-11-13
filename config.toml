@@ -7,7 +7,9 @@ PygmentsCodeFences = true
 pygmentsCodefences = true
 PygmentsStyle = "dracula"
 
-paginate  = 10
+ignorefiles = ["styles/*"]
+
+paginate  = 20
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
@@ -34,8 +36,13 @@ disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
 
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
 [permalinks]
-  posts = "/posts/:year/:month/:title/"
+  post = "/:title"
 
 [author]
   name = "George Pickering"

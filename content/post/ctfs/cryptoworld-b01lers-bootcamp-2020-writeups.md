@@ -3,7 +3,10 @@ title: "b01lers bootcampCTF CryptoWorld writeups 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 b01lers bootcamp capture the flag competition, specifically for the themed 'Crypto World'!"
 date: 2020-10-04T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/b0ilers-cryptoworld-writeups"
+tags:
+ - ctfs
 ---
 
 # Welcome, To Crypto World !!!!!
@@ -16,13 +19,13 @@ I wanted to do this separate than the rest of the b0ilers 2020 bootcamp CTF writ
 >
 > You will need a token to authenticate, which should have been inserted into your profile page.
 >
-> This challenge contains 12*3 mini-challenges related to crypto. The  
-> challenges are labeled by a letter A-L, indicating challenge type,  
-> and a number 1-3, indicating difficulty.  
+> This challenge contains 12*3 mini-challenges related to crypto. The
+> challenges are labeled by a letter A-L, indicating challenge type,
+> and a number 1-3, indicating difficulty.
 >
 > Flag format for the mini-challenges: mini{[A-L][1-3]_[0-9,a-f]+}
 >
-> The first two characters (e.g., A2) give the name of the  
+> The first two characters (e.g., A2) give the name of the
 > mini-challenge to which the flag should be submitted.
 >
 > Flags in the FAKE{} format are demo flags and can not be submitted for points.
@@ -470,7 +473,7 @@ Nice!
 >          text, with key length of 1 byte. What is the integer in the
 >          message?
 >
-> PQEMSRoMChsMHUkABx0MDgwbSQAaSR0eDAcdEEQPAB8MSR0  
+> PQEMSRoMChsMHUkABx0MDgwbSQAaSR0eDAcdEEQPAB8MSR0
 > BBhwaCAcNRUkPAB8MSQEcBw0bDA1JCAcNSR0eDAUfDEc=
 
 OK, so a basic base64 encoded string that was XOR'ed against a key that is a single byte. I'll use xortool to solve this, specifying the key length as 1, and since we're assumed to be working with English, I'll guess that the most frequent char is the letter `e`:
@@ -807,9 +810,9 @@ Z3 FTW.
 > \> w
 > You went east.
 >
-> To the north is a narrow bridge that leads to the tower of the Greatest Crypto  
-> Wizard of the land. Or, what remained of the bridge... Crossing the chasm  
-> below is surely impossible. A sign by the bridge says "You shall *not* pass."  
+> To the north is a narrow bridge that leads to the tower of the Greatest Crypto
+> Wizard of the land. Or, what remained of the bridge... Crossing the chasm
+> below is surely impossible. A sign by the bridge says "You shall *not* pass."
 
 Trying to move "north" isn't allowed. Not sure what this room was about, didn't have time to explore it more, if it was actually something.
 
@@ -817,15 +820,15 @@ Trying to move "north" isn't allowed. Not sure what this room was about, didn't 
 > \> w
 > You went west.
 >
-> You see an inn and decide that you deserve to splurge some on a good meal and  
-> a comfy bed. The room is tidy and clean but you do notice certain little  
-> visitors... mice. Fear not, the innkeeper's cat comes eagerly to your rescue.  
-> But whenever it tries to catch one, the mouse quickly disappears in one of  
-> many mouseholes in the room. With this game going on and on for minutes, you  
-> swear those mice must be playing with the cat. Interesting, you think, there  
+> You see an inn and decide that you deserve to splurge some on a good meal and
+> a comfy bed. The room is tidy and clean but you do notice certain little
+> visitors... mice. Fear not, the innkeeper's cat comes eagerly to your rescue.
+> But whenever it tries to catch one, the mouse quickly disappears in one of
+> many mouseholes in the room. With this game going on and on for minutes, you
+> swear those mice must be playing with the cat. Interesting, you think, there
 > must be a smarter way to capture small creatures...
 >
-> LEVEL 1: find *small* nonzero integers x, y, z that satisfy 299*x + 355*y + 251*z = 0  
+> LEVEL 1: find *small* nonzero integers x, y, z that satisfy 299*x + 355*y + 251*z = 0
 >          (e.g., x = 355*251, y = 299*251, z = -2*299*355 does not count)
 
 Enter: Z3, again! We can plug these values into a Z3 solver with our contraints:
@@ -1077,15 +1080,15 @@ And I ran out of time to come back to the second one.
 > \> w
 > You went west.
 >
-> The road curves and gives way to marshland. You tread by one careful  
-> step after another, focused so much on your footings that you only notice the  
-> lizardman when he starts talking to you. "Hello, I am in the Enformation  
-> Commerce. We two must have things to trade." He needs help with math to break  
+> The road curves and gives way to marshland. You tread by one careful
+> step after another, focused so much on your footings that you only notice the
+> lizardman when he starts talking to you. "Hello, I am in the Enformation
+> Commerce. We two must have things to trade." He needs help with math to break
 > some encrypted messages.
 >
 > LEVEL 1: solve the equations below for x and y
 >
->          (76*x + 221*y) mod 281 = 85  
+>          (76*x + 221*y) mod 281 = 85
 >          (171*x + 190*y) mod 281 = 138
 
 I did not have any time at all to look at this room, but it looks like it's solving a system of congruences, but with a fold where the value is now consistent of `x` and `y` that need to be solved for, in combination with the congruences.

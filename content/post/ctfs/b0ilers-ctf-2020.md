@@ -3,7 +3,10 @@ title: "Purdue University: b01lers CTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 b01lers capture the flag competition."
 date: 2020-03-15T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/b0ilers-writeups"
+tags:
+ - ctfs
 ---
 
 # b01lers CTF 2020

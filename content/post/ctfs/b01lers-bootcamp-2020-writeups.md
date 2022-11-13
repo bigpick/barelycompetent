@@ -3,7 +3,10 @@ title: "b01lers bootcampCTF writeups 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 b01lers bootcamp capture the flag competition"
 date: 2020-10-04T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/b01lers-bootcamp-writeups"
+tags:
+ - ctfs
 ---
 
 > Welcome to b01lers bootcamp CTF! b01lers CTF bootcamp is a brand-new super-introductory CTF for beginners. It is also a training camp! Check out the training at https://ctf.b01lers.com, join our Discord, and learn, then come back to compete!
@@ -509,7 +512,7 @@ Searching around, nothing really sticks out. In the source code, we see the foll
 
 Navigating to `/program`, we get:
 
-> Unauthorized.  
+> Unauthorized.
 > Users do not have access to this resource.
 
 Combining that with the home page displaying our User-agent, we probably need to modify our User-Agent to match some "Program" requirement.

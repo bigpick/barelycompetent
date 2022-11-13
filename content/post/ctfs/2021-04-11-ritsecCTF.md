@@ -2,10 +2,11 @@
 title: "ritsecCTF 2021"
 description: "Writeups for problems solved by gp for the 2021 RITSEC CTF competition."
 date: 2021-04-11T09:24:19-05:00
+url: "/ctfs/2021/ritsec-writeups"
 type:
  - post
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
 tags:
  - ctfs
 ---
@@ -1628,7 +1629,7 @@ echo ZWNobyAiJDEgSXMgYSBDb29sIE5hbWUgTGVzc3MgR28hIgo= | base64 -d
 echo "$1 Is a Cool Name Lesss Go!"
 ```
 
-So, if we go back to the name judgement page, we can try inputting something like so to get direct RCE: 
+So, if we go back to the name judgement page, we can try inputting something like so to get direct RCE:
 
 ```bash
 `base64 dababy.sh``

@@ -3,12 +3,15 @@ title: "DarkCTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 DarkCTF capture the flag competition."
 date: 2020-09-27T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/darkctf-writeups"
+tags:
+ - ctfs
 ---
 
 # DarkCTF 2020
 
-> Jeopardy Style International CTF  
+> Jeopardy Style International CTF
 > The 1st CTF organised by [DarkArmy](https://ctftime.org/team/26569)
 
 
@@ -331,7 +334,7 @@ Navigating to the given site, we just get a highlighted view of the webpage's so
     <title>Corona Web</title>
 </head>
 <body>
-    
+
 
     <style>
         body{
@@ -370,7 +373,7 @@ if (!empty($_SERVER['QUERY_STRING'])) {
     }
     if ($ctf2020 === base64_encode("ZGFya2N0Zi0yMDIwLXdlYg==")){
         echo "<h1 style='color: chartreuse;'>Flag : $flag_2</h1></br>";
-                
+
         }
     }
 
@@ -552,8 +555,8 @@ Given an audio file. Open in Sonic Visualization/Audacity/whatever and enable sp
 
 # OSINT
 ## Find Cell
-> I lost my phone while I was travelling back to home, I was able to get back my eNB ID, MCC and MNC could you help me catch the tower it was last found.  
-> note: decimal value upto 1 digit  
+> I lost my phone while I was travelling back to home, I was able to get back my eNB ID, MCC and MNC could you help me catch the tower it was last found.
+> note: decimal value upto 1 digit
 > Flag Format : darkCTF{latitude,longitude}
 
 The file we're given has the following:

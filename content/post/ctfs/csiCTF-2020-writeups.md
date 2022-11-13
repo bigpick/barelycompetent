@@ -3,7 +3,10 @@ title: "csi CTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 csi CTF capture the flag competition."
 date: 2020-07-21T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/csi-writeups"
+tags:
+ - ctfs
 ---
 
 # CSI CTF 2020
@@ -124,14 +127,14 @@ So now just open up the `flag.zip` with `18429` as the password.
 Flag is `csictf{gr34t_m1nds_th1nk_4l1ke}`.
 
 ### Quick Math
-> Ben has encrypted a message with the same value of 'e' for 3 public moduli -  
->   n1 = 86812553978993  
->   n2 = 81744303091421  
->   n3 = 83695120256591  
->  and got the cipher texts -  
->   c1 = 8875674977048  
->   c2 = 70744354709710  
->   c3 = 29146719498409.  
+> Ben has encrypted a message with the same value of 'e' for 3 public moduli -
+>   n1 = 86812553978993
+>   n2 = 81744303091421
+>   n3 = 83695120256591
+>  and got the cipher texts -
+>   c1 = 8875674977048
+>   c2 = 70744354709710
+>   c3 = 29146719498409.
 >  Find the original message. (Wrap it with csictf{})
 
 OK - so this is pretty obviously a [Hastad's broadcast attack](https://github.com/ashutosh1206/Crypton/tree/master/RSA-encryption/Attack-Hastad-Broadcast).
@@ -188,8 +191,8 @@ But seriously, this was a nice challenge, and I can say this is the first Enigma
 
 We're given:
 
-> We have intercepted the enemy's communications, but unfortunately, some data was corrupted during transmission. Can you recover the message?"  
-> M4 UKW $ Gamma 2 4 $ 5 9 $ 14 3 $ 5 20 fv cd hu ik es op yl wq jm "Ciphertext: zkrtwvvvnrkulxhoywoj"  
+> We have intercepted the enemy's communications, but unfortunately, some data was corrupted during transmission. Can you recover the message?"
+> M4 UKW $ Gamma 2 4 $ 5 9 $ 14 3 $ 5 20 fv cd hu ik es op yl wq jm "Ciphertext: zkrtwvvvnrkulxhoywoj"
 > (Words in the flag are separated by underscores)
 
 Doing some quick googling, it seems that we've gotten some information that's relative to the _Naval 4-wheel Enigma_: [reference](https://www.cryptomuseum.com/crypto/enigma/m4/index.htm) and also [Wikipedia](https://en.wikipedia.org/wiki/Enigma_machine).
@@ -238,7 +241,7 @@ We're given a photo (which is really a jpg):
 {{< image src="/img/csiCTF2020/arched.jpg" alt="arched.jpg" position="center" style="border-radius: 8px;" >}}
 &nbsp;
 
-I use [this awesome forensics/stego container](https://github.com/DominicBreuker/stego-toolkit) so naturally I start with 
+I use [this awesome forensics/stego container](https://github.com/DominicBreuker/stego-toolkit) so naturally I start with
 
 ```
 check_jpg.sh arched.jpg
@@ -317,7 +320,7 @@ Flag is `csictf{kung_fu_p4nd4}`
 ### unseen
 > With his dying breath, Prof. Ter Stegen hands us an image and a recording. He tells us that the image is least significant, but is a numerical key to the recording and the recording hides the answer. It may seem as though it's all for nothing, but trust me it's not.
 >
->  https://mega.nz/file/cmhnAQDB#9dbHojKcxzliZ5NAYtGBN7N8WHCqtoU7kKa5yuJzG0w  
+>  https://mega.nz/file/cmhnAQDB#9dbHojKcxzliZ5NAYtGBN7N8WHCqtoU7kKa5yuJzG0w
 >  https://mega.nz/file/h75UCIRJ#YGF3yCViKSQpwogmMgkdPQ1DXMez9Sv2DZBUWvCueSY
 
 So, we're given an audio `.wav` file and a picture of a city.
@@ -405,7 +408,7 @@ Flag is `csictf{4n0nym0u5_ftp_l0g1n}`.
 >  I should have really named my files better. I thought I've hidden the flag, now I can't find it myself.
 > (Wrap your flag in csictf{})
 >
-> ssh user1@chall.csivit.com -p 30630  
+> ssh user1@chall.csivit.com -p 30630
 >  Password is find32
 
 So, going on the box, we see a bunch of weirdly named files:
@@ -480,7 +483,7 @@ Flag is `csictf{th15_15_unu5u41}`.
 
 ## Misc
 ### Prison Break
-> I saw them put someone in jail. Can you find out who it is?  
+> I saw them put someone in jail. Can you find out who it is?
 > They said this is the best prison ever built. You sure can't break it, can you?
 >
 > nc chall.csivit.com 30407
@@ -628,7 +631,7 @@ One of the comments is: https://twitter.com/svqjournalist/status/123939270984183
 Flag is `csictf{san_francisco}`.
 
 ### Lo Scampo
-> Malcolm X took Broiestevane to a Day of the Dead themed party but she never returned. Her only friends, Mr Bean and the Pink Panther realised that she was missing when she didn't show up for an exam. Broiestevane liked posting pictures, where was the party held?  
+> Malcolm X took Broiestevane to a Day of the Dead themed party but she never returned. Her only friends, Mr Bean and the Pink Panther realised that she was missing when she didn't show up for an exam. Broiestevane liked posting pictures, where was the party held?
 > (Don't forget to wrap your answer in csictf{})'
 
 Going to https://www.instagram.com/Broiestevane/ we see another link in the bio for:
@@ -656,8 +659,8 @@ In the results, we find a link to a twitter posting at https://twitter.com/rishi
 
 In there, one of the comment threads is:
 
-> who take this pic  
-> ...  
+> who take this pic
+> ...
 > Arunopal Banerjee not this guy
 
 Looking that person up, we find his instagram at https://www.instagram.com/arunopal17/?hl=en. Looking through the comments on the original image, we get the flag.

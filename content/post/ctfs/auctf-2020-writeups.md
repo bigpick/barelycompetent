@@ -2,8 +2,11 @@
 title: "Auburn University: AUCTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 AUCTF capture the flag competition."
 date: 2020-04-03T09:24:19-05:00
+url: "/ctfs/2020/auctf-writeups"
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+tags:
+ - ctfs
 ---
 
 # Auburn University: AUCTF 2020

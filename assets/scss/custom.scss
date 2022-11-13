@@ -17,6 +17,17 @@ body {
   font-size: 1.2rem;
 }
 
+.bi {
+  display: inline-block;
+}
+
+.bi-link {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: inherit;
+}
+
+
 // Custom sizing for homepage text
 .index-header{
   font-size: 10rem;

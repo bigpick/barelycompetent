@@ -3,7 +3,10 @@ title: "Houseplant CTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 Houseplant CTF (riceteacatpanda) capture the flag competition."
 date: 2020-04-26T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/riceteacatpanda-writeups"
+tags:
+ - ctfs
 ---
 
 # Housplant CTF 2020
@@ -12,7 +15,7 @@ categories:
 >
 > Starts at 19:00 UTC on Friday 24th April 2020 and runs until 19:00 UTC on Sunday 26th April 2020
 >
-> Dicsord:  
+> Dicsord:
 > This is the link: https://discordapp.com/invite/QRhHGJA
 
 
@@ -42,8 +45,8 @@ I'm terrified of what the one that wasn't "60% reduced guessing" looked like...
 # Beginners
 
 ## Beginner1
-> When Bob and Jia were thrown into the world of cybersecurity, they didn't know anything- and thus were very overwhelmed. They're trying to make sure it doesn't happen to you.  
-> Let's cover some bases first.  
+> When Bob and Jia were thrown into the world of cybersecurity, they didn't know anything- and thus were very overwhelmed. They're trying to make sure it doesn't happen to you.
+> Let's cover some bases first.
 > `cnRjcHt5b3VyZV92ZXJ5X3dlbGNvbWV9`
 
 ```bash
@@ -54,9 +57,9 @@ rtcp{youre_very_welcome}
 Flag is `rtcp{youre_very_welcome}`.
 
 ## Beginner2
-> Bob wanted to let you guys know that "You might not be a complete failure."  
-> Thanks, Bob.  
-> `72 74 63 70 7b 62 6f 62 5f 79 6f 75 5f 73 75 63 6b 5f 61 74 5f 62 65 69 6e 67 5f 65 6e 63 6f 75 72 61 67 69 6e 67 7d`  
+> Bob wanted to let you guys know that "You might not be a complete failure."
+> Thanks, Bob.
+> `72 74 63 70 7b 62 6f 62 5f 79 6f 75 5f 73 75 63 6b 5f 61 74 5f 62 65 69 6e 67 5f 65 6e 63 6f 75 72 61 67 69 6e 67 7d`
 > Hint! Still covering bases here.
 
 &nbsp;
@@ -66,8 +69,8 @@ Flag is `rtcp{youre_very_welcome}`.
 Flag is `rtcp{bob_you_suck_at_being_encouraging}`.
 
 ## Beginner3
-> Fun fact: Jia didn't actually know what this was when they first started out. If you got this, you're already doing better than them ;-;  
-> `162 164 143 160 173 163 165 145 137 155 145 137 151 137 144 151 144 156 164 137 153 156 157 167 137 167 150 141 164 137 157 143 164 141 154 137 167 141 163 137 157 153 141 171 77 41 175`  
+> Fun fact: Jia didn't actually know what this was when they first started out. If you got this, you're already doing better than them ;-;
+> `162 164 143 160 173 163 165 145 137 155 145 137 151 137 144 151 144 156 164 137 153 156 157 167 137 167 150 141 164 137 157 143 164 141 154 137 167 141 163 137 157 153 141 171 77 41 175`
 >  Hint! wow, these bases are getting smaller
 
 &nbsp;
@@ -77,7 +80,7 @@ Flag is `rtcp{bob_you_suck_at_being_encouraging}`.
 Flag is `rtcp{sue_me_i_didnt_know_what_octal_was_okay?!}`.
 
 ## Beginner4
-> Caesar was stabbed 23 times by 60 perpetrators... sounds like a modern group project  
+> Caesar was stabbed 23 times by 60 perpetrators... sounds like a modern group project
 > egpc{lnyy_orggre_cnegvpvcngr}
 
 &nbsp;
@@ -87,8 +90,8 @@ Flag is `rtcp{sue_me_i_didnt_know_what_octal_was_okay?!}`.
 Flag is `rtcp{yall_better_participate}`.
 
 ## Beginner5
-> beep boop  
-> -- .- -. -.-- ..--.- -... . . .--. ... ..--.- .- -. -.. ..--.- -... --- --- .--. ...  
+> beep boop
+> -- .- -. -.-- ..--.- -... . . .--. ... ..--.- .- -. -.. ..--.- -... --- --- .--. ...
 > Remember to wrap the flag in the flag format rtcp{something}
 
 &nbsp;
@@ -98,8 +101,8 @@ Flag is `rtcp{yall_better_participate}`.
 Flag is `rtcp{MANY_BEEPS_AND_BOOPS}`.
 
 ## Beginner6
-> i'm so tired...  
-> 26 26 26 26 26 26 26 26 19 12 5 5 16 9 14 7 9 14 16 8 25 19 9 3 19  
+> i'm so tired...
+> 26 26 26 26 26 26 26 26 19 12 5 5 16 9 14 7 9 14 16 8 25 19 9 3 19
 > Remember to wrap the whole thing in the flag format rtcp{}
 
 &nbsp;
@@ -109,7 +112,7 @@ Flag is `rtcp{MANY_BEEPS_AND_BOOPS}`.
 Flag is `rtcp{zzzzzzzzsleepinginphysics}`.
 
 ## Beginner7
-> Don't go around bashing people.  
+> Don't go around bashing people.
 > igxk{fmovhh_gsvb_ziv_nvzm}
 
 &nbsp;
@@ -119,8 +122,8 @@ Flag is `rtcp{zzzzzzzzsleepinginphysics}`.
 Flag is `rtcp{unless_they_are_mean}`.
 
 ## Beginner8
-> You either mildly enjoy bacon, think it's a food of the gods, or are vegan/vegetarian.  
-> 00110 01110 00100 00000 10011 00101 01110 01110 00011 00011 01110 01101 10011 10010 10011 00000 10001 10101 00100  
+> You either mildly enjoy bacon, think it's a food of the gods, or are vegan/vegetarian.
+> 00110 01110 00100 00000 10011 00101 01110 01110 00011 00011 01110 01101 10011 10010 10011 00000 10001 10101 00100
 > Remember to wrap the flag in rtcp{}
 
 &nbsp;
@@ -130,7 +133,7 @@ Flag is `rtcp{unless_they_are_mean}`.
 Flag is `rtcp{GOEATFOODDONTSTARVE}`.
 
 ## Beginner9
-> Hope you've been paying attention! :D  
+> Hope you've been paying attention! :D
 > Remember to wrap the flag with rtcp{}
 
 &nbsp;
@@ -142,9 +145,9 @@ Flag is `rtcp{nineornone}`.
 # Crypto
 
 ## Broken Yolks
-> Fried eggs are the best.  
-> Oh no! I broke my yolk... well, I guess I have to scramble it now.  
-> Ciphertext: smdrcboirlreaefd  
+> Fried eggs are the best.
+> Oh no! I broke my yolk... well, I guess I have to scramble it now.
+> Ciphertext: smdrcboirlreaefd
 > Dev: Delphine
 
 Hint suggests "scrambled" lettering. Total guess for what the letters are scrambled to be, but challenge is "egg themed" so look for words related to that.
@@ -154,7 +157,7 @@ Flag is `rtcp{scrambled_or_fried}`.
 ## Sizzle
 > Due to the COVID-19 outbreak, we ran all out of bacon, so we had to use up the old stuff instead. Sorry for any inconvenience caused...
 >
-> Dev: William  
+> Dev: William
 > Hint! Wrap your flag with rtcp{}, use all lowercase, and separate words with underscores.
 > Hint! Is this really what you think it is?
 
@@ -192,20 +195,20 @@ The correct approach ended up being "test2":
 Flag is `rtcp{bacon_but_grilled_and_morsified}`.
 
 ## CH3COOH
-> Owaczoe gl oa yjirmng fmeigghb bd tqrrbq nabr nlw heyvs pfxavatzf raog ktm vlvzhbx tyyocegguf.  
-> Tbbretf gwiwpyezl ahbgybbf dbjr rh sveah cckqrlm opcmwp yvwq zr jbjnar.  
-> Slinjem gfx opcmwp yvwq gl demwipcw pl ras sckarlmogghb bd xhuygcy mk ghetff zr opcmwp yvwq ztqgckwn.  
-> Rasec tfr ktbl rrdrq ht iggstyk, rrnxbqggu bl lchpvs zymsegtzf.  
-> Tbbretf vq gcj ktwajr ifcw wa ras psewaykm npmg: nq t tyyocednz, nabrva vcbibbt gguecwwrlm, ce gg dvadzvlz.  
-> Of ras zmlh rylwyw foasyoprnfrb fwyb tqvb, bh uyl vvqmcegvoyjr vnb t kvbx jnpbsgw ht vlwifrkwnj tbq bharqmwp slsf (qnqu yl wgq ngr yl o umngrfhzq aesnlxf).  
-> Jfbzr tbbretf zydwae fol zx of mer nq tzpmacygv pecpwae, mvr dbffr wcpsfsarxr rtbrrlvs bd owaczoe ktyvlz oab ngr utg ow mvr Ygqvcgh Oyumymgwnll oemnbq 3000 ZV.  
-> Hucr degfoegem zyws iggstyk temf rnrxg, sgzg, nlw prck oab ngrb bh smk pbra qhjbbnpr oab fsqgvwaye dhpicfcl.  
-> Heyvsf my wg yegb ftjr zxsa dhiab bb Rerdggtb hpgg.  
-> Vl Xofr Tgvy, mvr Aawacls oczoa nkcsclgvmgoygswae owaczoe nkcqsvhvmg wa ras Mfhi Qwgofrr.  
-> Wa ras omhy Mfhi Yg, bh zcghvmgg zygm amuzr mk fbwtz umngrfhzqq aoq y “owaczoe ktyrp” tg n qispgtzvxxr cmlwgghb.  
-> Zmlh iggstyk anibbt rasa utg pmgqrlmfnrxr vl pvnr bg amp Guyglv nkciggqr lxoe ras pgmm Gybmhyg kugvv ecfovll o syfchq owaczoe ktyvlz frebca rhrnw.  
-> Foaw Vvvlxgr tbbretff ygr gfxwe slsf dhf psewaykm nlw arbbqvltz cskdbqxg jcks jpbhgcg rbug wa ras nekwpsehhptz zyginj Jwzgg Mnmlvh.  
-> pmqc{tbbretf_bl_fm_sglv_nlw_qugig_cjxofc}  
+> Owaczoe gl oa yjirmng fmeigghb bd tqrrbq nabr nlw heyvs pfxavatzf raog ktm vlvzhbx tyyocegguf.
+> Tbbretf gwiwpyezl ahbgybbf dbjr rh sveah cckqrlm opcmwp yvwq zr jbjnar.
+> Slinjem gfx opcmwp yvwq gl demwipcw pl ras sckarlmogghb bd xhuygcy mk ghetff zr opcmwp yvwq ztqgckwn.
+> Rasec tfr ktbl rrdrq ht iggstyk, rrnxbqggu bl lchpvs zymsegtzf.
+> Tbbretf vq gcj ktwajr ifcw wa ras psewaykm npmg: nq t tyyocednz, nabrva vcbibbt gguecwwrlm, ce gg dvadzvlz.
+> Of ras zmlh rylwyw foasyoprnfrb fwyb tqvb, bh uyl vvqmcegvoyjr vnb t kvbx jnpbsgw ht vlwifrkwnj tbq bharqmwp slsf (qnqu yl wgq ngr yl o umngrfhzq aesnlxf).
+> Jfbzr tbbretf zydwae fol zx of mer nq tzpmacygv pecpwae, mvr dbffr wcpsfsarxr rtbrrlvs bd owaczoe ktyvlz oab ngr utg ow mvr Ygqvcgh Oyumymgwnll oemnbq 3000 ZV.
+> Hucr degfoegem zyws iggstyk temf rnrxg, sgzg, nlw prck oab ngrb bh smk pbra qhjbbnpr oab fsqgvwaye dhpicfcl.
+> Heyvsf my wg yegb ftjr zxsa dhiab bb Rerdggtb hpgg.
+> Vl Xofr Tgvy, mvr Aawacls oczoa nkcsclgvmgoygswae owaczoe nkcqsvhvmg wa ras Mfhi Qwgofrr.
+> Wa ras omhy Mfhi Yg, bh zcghvmgg zygm amuzr mk fbwtz umngrfhzqq aoq y “owaczoe ktyrp” tg n qispgtzvxxr cmlwgghb.
+> Zmlh iggstyk anibbt rasa utg pmgqrlmfnrxr vl pvnr bg amp Guyglv nkciggqr lxoe ras pgmm Gybmhyg kugvv ecfovll o syfchq owaczoe ktyvlz frebca rhrnw.
+> Foaw Vvvlxgr tbbretff ygr gfxwe slsf dhf psewaykm nlw arbbqvltz cskdbqxg jcks jpbhgcg rbug wa ras nekwpsehhptz zyginj Jwzgg Mnmlvh.
+> pmqc{tbbretf_bl_fm_sglv_nlw_qugig_cjxofc}
 > Hint! Short keys are never a good thing in cryptography.
 
 Brute force Vigenere cipher text.
@@ -217,7 +220,7 @@ Brute force Vigenere cipher text.
 Flag is `rtcp{vinegar_on_my_fish_and_chips_please}`.
 
 ## fences are cool unless they're taller than you
-> They say life's a roller coaster, but to me, it's just jumping over fences.  
+> They say life's a roller coaster, but to me, it's just jumping over fences.
 > tat_uiwirc{s_iaaotrc_ahn}pkdb_esg
 
 Title suggests a Railfence cipher. Google searching for brute forcing railfence cipher leads us to [this page](https://exercism.io/tracks/python/exercises/rail-fence-cipher/solutions/8d7425bdbb844c5e9416015cd7eb3daa).
@@ -355,9 +358,9 @@ We're given a file called `output.png`:
 {{< image src="/img/rtcp_ctf/output.png" alt="output.png" position="center" style="border-radius: 8px;" >}}
 &nbsp;
 
-> Hint! Replace spaces in the flag with { or } depending on their respective places within the flag.  
-> Hint! Hues of hex  
-> Hint! This type of encoding was invented by Josh Cramer.  
+> Hint! Replace spaces in the flag with { or } depending on their respective places within the flag.
+> Hint! Hues of hex
+> Hint! This type of encoding was invented by Josh Cramer.
 
 The hinting to death of the challenge revealed it to be a [Hexahue image](https://www.geocachingtoolbox.com/index.php?lang=en&page=hexahue).
 
@@ -450,8 +453,8 @@ Flag is `RTCP{SHOULD,FL5G4,B3,ST1CKY,OR,N0T}`.
 > My math teacher made me do this, so now I'm forcing you to do this too.
 >
 > Flag is all lowercase; replace spaces with underscores.
-> Hint! When placing the string in the matrix, go up to down rather than left to right.  
-> Hint! Google matrix multiplication properties if you're stuck.  
+> Hint! When placing the string in the matrix, go up to down rather than left to right.
+> Hint! Google matrix multiplication properties if you're stuck.
 
 We're given one file:
 
@@ -553,7 +556,7 @@ Flag is `rtcp{Hope_is_a_true_parasite}`.
 ## .... .- .-.. ..-.
 > Ciphertext: DXKGMXEWNWGPJTCNVSHOBGASBTCBHPQFAOESCNODGWTNTCKY
 >
-> Hint! All letters must be capitalized  
+> Hint! All letters must be capitalized
 > Hint! The flag must be in the format rtcp{.*}
 
 Translating the challenge name from morse code gives us "HALF".
@@ -572,9 +575,9 @@ Flag is `RTCP{TW0GALLONSOFH4LFMAK3WH0LEM1LK}`.
 
 # Forensics
 ## Neko Hero
-> Please join us in our campaign to save the catgirls once and for all, as the COVID-19 virus is killing them all and we need to provide food and shelter for them!  
-> nya~s and uwu~s will be given to those who donate!  
-> and headpats too!  
+> Please join us in our campaign to save the catgirls once and for all, as the COVID-19 virus is killing them all and we need to provide food and shelter for them!
+> nya~s and uwu~s will be given to those who donate!
+> and headpats too!
 
 _Fucking weebs_.
 
@@ -587,7 +590,7 @@ We're given a file, `advertisement.png`. Using [stegsolve](https://github.com/za
 Flag is `rtcp{s4vE_ALL_7h3m_c4tG1Rl$}`.
 
 ## Ezoterik
-> Inventing languages is hard. Luckily, there's plenty of them, including stupid ones.  
+> Inventing languages is hard. Luckily, there's plenty of them, including stupid ones.
 > Hint! You will find what you seek beyond the whitespace
 
 We're given a picture:
@@ -745,7 +748,7 @@ rtcp{z1pPeD_4_c0uPl3_t00_M4Ny_t1m3s_a1b8c687}
 Flag is `rtcp{z1pPeD_4_c0uPl3_t00_M4Ny_t1m3s_a1b8c687}`.
 
 ## Satan's Jigsaw
-> Oh no! I dropped my pixels on the floor and they're all muddled up! It's going to take me years to sort all 90,000 of these again :(  
+> Oh no! I dropped my pixels on the floor and they're all muddled up! It's going to take me years to sort all 90,000 of these again :(
 >  Hint! long_to_bytes
 
 The given file has **90000** individual files, each of which is a single pixel. The names of the files seemed interesting. Combined with the hint, I tried converting the names as `long`s, using `long_to_bytes` and we get a resulting `xx yy` pair. I took this to be the X,Y coordinates of the file's pixel in the flag picture.
@@ -866,8 +869,8 @@ First google result for it is a [Twitter page for a Groovy Shoobie user](https:/
 
 It's [very first tweet](https://twitter.com/GShoobie/status/1253648122930176000) sends us to an instagram page:
 
-> Woah, now this is kinda cool! I really like not having to use that wacky Instagram site anymore. (Feel free to follow me @groovyshoobie tho)  
-> It's kinda cool here! I think I'll stay here.  
+> Woah, now this is kinda cool! I really like not having to use that wacky Instagram site anymore. (Feel free to follow me @groovyshoobie tho)
+> It's kinda cool here! I think I'll stay here.
 > Gotta go water the houseplants now though :)
 
 [Instagram page for that user](https://www.instagram.com/groovyshoobie/) has the flag in the bio:
