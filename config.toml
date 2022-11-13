@@ -36,6 +36,11 @@ disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
 
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
 [permalinks]
   post = "/:title"
 
