@@ -1,0 +1,109 @@
+h1 {
+  font-size: 2.925rem;
+  font-family: "Staatliches";
+
+  &:not(.text-gradient-drac-cyan-green) &:not(.text-gradient-drac-pink-purple) {
+    @media (prefers-color-scheme: dark) {
+      color: $purple;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $light-color-variant;
+    }
+
+    [data-theme=dark] & {
+      color: $purple;
+    }
+
+    [data-theme=light] & {
+      color: $light-color-variant;
+    }
+  }
+}
+
+h2 {
+  font-size: 1.925rem;
+  color: $light-color-variant;
+  font-family: "Staatliches";
+
+  @media (prefers-color-scheme: dark) {
+    color: $purple;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $code-dark-bg;
+  }
+
+  [data-theme=dark] & {
+    color: $purple;
+  }
+
+  [data-theme=light] & {
+    color: $code-dark-bg;
+  }
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: $light-color-variant;
+  font-family: "Staatliches";
+
+  @media (prefers-color-scheme: dark) {
+    color: $pink;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $curr-line;
+  }
+
+  [data-theme=dark] & {
+    color: $pink;
+  }
+
+  [data-theme=light] & {
+    color: $curr-line;
+  }
+}
+
+h4 {
+  font-size: 1.4rem;
+  color: $light-color-variant;
+  font-family: "Staatliches";
+
+  @media (prefers-color-scheme: dark) {
+    color: $green;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $comment;
+  }
+
+  [data-theme=dark] & {
+    color: $green;
+  }
+
+  [data-theme=light] & {
+    color: $comment;
+  }
+}
+
+h5 {
+  color: $light-color-variant;
+  font-family: "Staatliches";
+
+  @media (prefers-color-scheme: dark) {
+    color: $yellow;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $light-color-variant;
+  }
+
+  [data-theme=dark] & {
+    color: $yellow;
+  }
+
+  [data-theme=light] & {
+    color: $light-color-variant;
+  }
+}

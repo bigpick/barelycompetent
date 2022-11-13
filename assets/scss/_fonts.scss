@@ -1,0 +1,47 @@
+/*
+ * ==============================================
+ * Fonts
+ * ==============================================
+ */
+@font-face {
+  font-family: 'Iosevka';
+  font-style:  normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url("../fonts/iosevka-term-regular.woff2") format("woff2"),
+       url("../fonts/iosevka-mayukai-regular.woff") format("woff"),
+       url("../fonts/iosevka-term-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Iosevka Slab';
+  font-style:  normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url("../fonts/iosevka-slab-regular.woff2") format("woff2"),
+       url("../fonts/iosevka-slab-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style:  normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url("../fonts/Comfortaa-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Staatliches';
+  font-style:  normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url("../fonts/Staatliches-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Slabo';
+  font-style:  normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url("../fonts/Slabo27px-Regular.ttf") format("truetype");
+}

@@ -1,0 +1,564 @@
+@charset "UTF-8";
+
+@import "./_variables";
+@import "./_fonts";
+@import "./_footer";
+
+@import "./button";
+@import "./gradients";
+@import "./gradienttext";
+@import "./headers";
+@import "./collapsable_code";
+@import "./scroll_top";
+
+body {
+  font-family: "Slabo", "Iosevka Slab", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
+  font-weight: 400 !important;
+  font-size: 1.2rem;
+}
+
+::selection {
+  background: $purple; /* WebKit/Blink Browsers */
+  color: $background;
+}
+
+::-moz-selection {
+  background: $purple; /* Gecko Browsers */
+  color: $background;
+}
+
+em, i, strong {
+  // Default
+  color: $light-color-variant;
+
+  @media (prefers-color-scheme: dark) {
+    color: $dark-color-variant;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $light-color-variant;
+  }
+
+  [data-theme=dark] & {
+    color: $dark-color-variant;
+  }
+
+  [data-theme=light] & {
+    color: $light-color-variant;
+  }
+}
+
+.post-content {
+  p {
+    text-align: justify;
+  }
+
+  table {
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  table, th, td {
+    border: 1px dashed $curr-line;
+    padding: 10px;
+  }
+
+  th {
+    color: $foreground;
+  }
+}
+
+/*
+ * ==============================================
+ * Header
+ * ==============================================
+ */
+.header {
+
+  [data-theme=dark] & {
+    background-color: $drac-black;
+  }
+
+  [data-theme=light] & {
+    background-color: $drac-black;
+  }
+
+  .theme-toggler {
+    @media (prefers-color-scheme: dark) {
+      color: $drac-quote;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $white;
+    }
+
+    [data-theme=dark] & {
+      color: $white;
+    }
+
+    [data-theme=light] & {
+      color: $drac-quote;
+    }
+  }
+}
+
+/*
+ * ==============================================
+ * Posts listing
+ * ==============================================
+ */
+.posts {
+  .post {
+    &-item {
+      border-bottom: 1px $curr-line dashed;
+    }
+  }
+
+  .post-title{
+    font-size: 1.2rem;
+  }
+}
+
+
+/*
+ * ==============================================
+ * Command line logo in top left
+ * ==============================================
+ */
+.logo {
+  &__mark {
+    color: $foreground;
+  }
+
+  &__text {
+    font-family: "Iosevka";
+    color: $foreground;
+  }
+
+  &__cursor {
+    background: $green;
+
+    .dark-theme & {
+        background: $green;
+    }
+  }
+}
+
+/*
+ * ==============================================
+ * main / _main contents
+ * ==============================================
+ */
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+p a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2rem;
+
+  @media (prefers-color-scheme: dark) {
+    text-decoration-color: $cyan;
+  }
+
+  @media (prefers-color-scheme: light) {
+    text-decoration-color: $comment;
+  }
+
+  [data-theme=dark] & {
+    text-decoration-color: $cyan;
+  }
+
+  [data-theme=light] & {
+    text-decoration-color: $comment;
+  }
+
+  &:hover {
+    @media (prefers-color-scheme: dark) {
+      color: $cyan;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $blue;
+      text-decoration-color: $blue;
+    }
+
+    [data-theme=dark] & {
+      color: $cyan;
+    }
+
+    [data-theme=light] & {
+      color: $blue;
+      text-decoration-color: $blue;
+    }
+  }
+}
+
+li a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2rem;
+
+  @media (prefers-color-scheme: dark) {
+    text-decoration-color: $cyan;
+  }
+
+  @media (prefers-color-scheme: light) {
+    text-decoration-color: $comment;
+  }
+
+  [data-theme=dark] & {
+    text-decoration-color: $cyan;
+  }
+
+  [data-theme=light] & {
+    text-decoration-color: $comment;
+  }
+
+  &:not(nav > ul > li > a):hover {
+    @media (prefers-color-scheme: dark) {
+      color: $cyan;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $blue;
+      text-decoration-color: $blue;
+    }
+
+    [data-theme=dark] & {
+      color: $cyan;
+    }
+
+    [data-theme=light] & {
+      color: $blue;
+      text-decoration-color: $blue;
+    }
+  }
+}
+
+
+td a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2rem;
+
+  @media (prefers-color-scheme: dark) {
+    text-decoration-color: $cyan;
+  }
+
+  @media (prefers-color-scheme: light) {
+    text-decoration-color: $comment;
+  }
+
+  [data-theme=dark] & {
+    text-decoration-color: $cyan;
+  }
+
+  [data-theme=light] & {
+    text-decoration-color: $comment;
+  }
+
+  &:hover {
+    @media (prefers-color-scheme: dark) {
+      color: $cyan;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $blue;
+      text-decoration-color: $blue;
+    }
+
+    [data-theme=dark] & {
+      color: $cyan;
+    }
+
+    [data-theme=light] & {
+      color: $blue;
+      text-decoration-color: $blue;
+    }
+  }
+}
+
+/* Code font */
+code {
+  font-family: Iosevka,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+  background: $code-dark-bg;
+  font-size: .9rem;
+  color: $foreground;
+
+  @media (prefers-color-scheme: dark) {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+
+  [data-theme=dark] & {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+
+  [data-theme=light] & {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+}
+
+pre {
+  background: $code-dark-bg;
+  @media (prefers-color-scheme: dark) {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+
+  [data-theme=dark] & {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+
+  [data-theme=light] & {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+  code {
+    font-size: .9rem;
+    color: $foreground;
+    line-height: 1.2rem !important;
+
+    @media (prefers-color-scheme: dark) {
+      color: $foreground;
+      background: $code-dark-bg;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $foreground;
+      background: $code-dark-bg;
+    }
+
+    [data-theme=dark] & {
+      color: $foreground;
+      background: $code-dark-bg;
+    }
+
+    [data-theme=light] & {
+      color: $foreground;
+      background: $code-dark-bg;
+    }
+  }
+}
+
+blockquote {
+  color: $drac-quote;
+  @media (prefers-color-scheme: dark) {
+    color: $drac-quote;
+    border-left: 3px solid $cyan;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $code-dark-bg;
+    border-left: 3px solid $code-dark-bg;
+  }
+
+  [data-theme=dark] & {
+    color: $drac-quote;
+    border-left: 3px solid $cyan;
+  }
+
+  [data-theme=light] & {
+    color: $code-dark-bg;
+    border-left: 3px solid $code-dark-bg;
+  }
+}
+
+/**
+ * Firefox specific rule
+ */
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+  }
+}
+
+
+/*
+ * ==============================================
+ * Menu
+ * ==============================================
+ */
+.menu {
+  background: $dark-background-secondary;
+
+  border-right: none;
+
+  .dark-theme & {
+    background: transparent;
+  }
+
+  &__inner {
+    color: #8a8f98;
+    font-size: 1.1em;
+    background: transparent;
+
+    li {
+      margin: 0 12px;
+
+      &:nth-child(1):hover {
+        .dark-theme & {
+          :nth-child(1):hover {
+           color: $yellow;
+          }
+        }
+        color: $yellow;
+      }
+      &:nth-child(2):hover {
+        .dark-theme & {
+          :nth-child(1):hover {
+           color: $pink;
+          }
+        }
+        color: $pink;
+      }
+      &:nth-child(3):hover {
+        .dark-theme & {
+          :nth-child(1):hover {
+           color: $cyan;
+          }
+        }
+        color: $cyan;
+      }
+      &:nth-child(4):hover {
+        .dark-theme & {
+          :nth-child(1):hover {
+           color: $green;
+          }
+        }
+        color: $green;
+      }
+    }
+  }
+}
+
+/*
+ * ==============================================
+ * Normalize
+ * ==============================================
+ */
+/* Webkit Scrollbar Customize */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $curr-line;
+}
+
+::-webkit-scrollbar-thumb {
+  &:hover {
+    background: $purple;
+  }
+}
+// Firefox
+.scroller {
+  overflow-y: scroll;
+  scrollbar-color: $purple $curr-line;
+}
+
+/*
+ * ==============================================
+ * Front page SVG individual highlighting
+ * ==============================================
+ */
+#index-svg-Github {
+  :hover {
+    stroke: $orange;
+  }
+}
+#index-svg-Linkedin {
+  :hover {
+    stroke: $green;
+  }
+}
+#index-svg-Email {
+  :hover {
+    stroke: $cyan;
+  }
+}
+
+
+/*
+ * ==============================================
+ * Dracula specific Pygments additions
+ * ==============================================
+ */
+:root
+{
+  --background: #1d1e26;
+  --comment:    #6272A4;
+  --foreground: #F8F8F2;
+  --selection:  #8A8F98;
+
+  --cyan:       #8BE9FD;
+  --green:      #50FA7B;
+  --orange:     #FFB86C;
+  --pink:       #FF79C6;
+  --purple:     #BD93F9;
+  --red:        #FF5555;
+  --yellow:     #F1FA8C;
+}
+
+pre::-webkit-scrollbar
+{
+  width: 14px;
+}
+
+pre::-webkit-scrollbar-track
+{
+  background-color: var(--curr-line);
+  border-radius: 0px;
+}
+
+pre::-webkit-scrollbar-thumb
+{
+  background-color: var(--comment);
+  border-radius: 0px;
+}
+
+code[class*="language-"],
+pre[class*="language-"]
+{
+  text-shadow: none;
+  font-family: Iosevka, PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
+  font-size: 1rem;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+// Make no borders around code blocks
+.highlight table, .highlight tr, .highlight td { line-height: 1.2rem !important; border-spacing: 0; border-collapse: separate; padding: 0; }
+.highlight div { overflow: auto; }

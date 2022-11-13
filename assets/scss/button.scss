@@ -1,0 +1,25 @@
+button, .button, a.button {
+  @media (prefers-color-scheme: dark) {
+    color: $drac-quote;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $light-color-variant;
+  }
+
+  [data-theme=dark] & {
+    color: $drac-quote;
+  }
+
+  [data-theme=light] & {
+    color: $light-color-variant;
+  }
+
+}
+
+.button {
+  &:hover {
+    background-color: $drac-quote;
+    color: $black;
+  }
+}

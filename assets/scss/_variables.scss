@@ -1,0 +1,47 @@
+$background: #1d1e26;
+$code-dark-bg: #252733;
+$curr-line: #44475a;
+$foreground: #f8f8f2;
+$comment: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+$drac-black: #15171b;
+$drac-quote: #8A8F98;
+$white: #f8f8f2;
+$black: $drac-black;
+
+$dark-background: $background;
+$dark-background-secondary: $drac-black;
+$dark-background-header: $drac-black;
+$dark-color: #f8f8f2;
+$dark-color-variant: $white;
+$dark-color-secondary: #585B6E;
+$dark-border-color: $curr-line;
+$dark-table-color: $code-dark-bg;
+
+$light-background: $white;
+$light-background-secondary: #eaeaea;
+$light-background-header: $black;
+$light-color: #222;
+$light-color-variant: black;
+$light-color-secondary: #999;
+$light-border-color: #dcdcdc;
+$light-table-color: $code-dark-bg;
+$blue: #0f62fe;
+
+$media-size-phone: "(max-width: 684px)";
+$media-size-tablet: "(max-width: 900px)";
+
+/* Variables for js, must be the same as these in @custom-media queries */
+:root {
+  --phoneWidth: (max-width: 684px);
+  --tabletWidth: (max-width: 900px);
+}
+
+/* Content */
+$max-width: 860px;
