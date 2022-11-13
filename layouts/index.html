@@ -5,12 +5,8 @@
                <img src="{{ .Site.Params.Portrait.Path }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
             {{ end }}
 
-            <!--<h1 style="color: currentColor">{{ .Site.Title }}</h1>-->
-            <h1 style="font-size:8rem;" class="text-gradient-drac-pink-purple">Barely Competent</h1>
+            <h1 class="index-header text-gradient-drac-pink-purple">Barely Competent</h1>
             {{- with .Site.Params.homeSubtitle }}
-                <!-- {{ . }} -->
-                 <!-- {{ $title_parts := split . " " }} -->
-                 <!-- <p> <font style="color: #ffb86c">{{ index $title_parts 0 }} </font><font style="color: #50fa7b">{{ index $title_parts 1}} </font><font style="color: #8be9fd">{{ index $title_parts 2}}</font><p> -->
                 <p>{{.}}</p>
             {{- end }}
 
