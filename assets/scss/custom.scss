@@ -17,6 +17,20 @@ body {
   font-size: 1.2rem;
 }
 
+// Custom sizing for homepage text
+.index-header{
+  font-size: 10rem;
+
+  @media #{$media-size-tablet} {
+    font-size:6rem;
+  }
+
+  @media #{$media-size-phone} {
+    font-size:3rem;
+  }
+
+}
+
 ::selection {
   background: $purple; /* WebKit/Blink Browsers */
   color: $background;
