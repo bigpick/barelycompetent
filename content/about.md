@@ -3,17 +3,17 @@ title: "About me"
 date: 2020-11-18T09:22:39-05:00
 ---
 
-# I'm Zilla
+Nice to meet you; You can call me GP.
 
-Currently writing software at [IBM](https://www.ibm.com).
+Currently I write software at [IBM](https://www.ibm.com).
 
 I try to spend as much of my free time doing something productive, like
 practicing a new programming language or reading up on industry best
 practices.
 
-If I'm not being productive, I'm lounging playing video games (and
-waiting patiently for a kind donor to bestow me a new next gen graphics
-card :) ).
+If I'm not being productive, my preferred means of lounging is playing
+video games; If a kind donor wanted to bestow me a new next gen graphics
+card, I would not turn it down :).
 
 ## Work
 
