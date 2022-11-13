@@ -3,14 +3,17 @@ title: "Castors CTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 castorsCTF capture the flag competition."
 date: 2020-06-01T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/castors-writeups"
+tags:
+ - ctfs
 ---
 
 # Castors CTF 2020
 
-> Welcome to the first castorsCTF!  
-> This is a capture the flag competition, jeopardy style.  
-> The event starts at 2000 UTC on Friday 29th May 2020 and runs until 2000 UTC on Sunday 31st May 2020. The flag format is `castorsCTF{[a-zA-Z0-9_.-]*}` unless otherwise specified.  
+> Welcome to the first castorsCTF!
+> This is a capture the flag competition, jeopardy style.
+> The event starts at 2000 UTC on Friday 29th May 2020 and runs until 2000 UTC on Sunday 31st May 2020. The flag format is `castorsCTF{[a-zA-Z0-9_.-]*}` unless otherwise specified.
 > The goal of our CTF is to promote learning amongst students, raise cybersecurity awareness, and have fun. To that end, we ask that you do not share solutions or hints until after the CTF is over. If a team is found sharing flags it will be grounds for immediate disqualification.
 
 These are writeups to challenges I solved for this CTF. We as a team did pretty good this week again - top 10 finish! Thanks to Datajerk for kicking pwn ass as usual, Dobs for his reversing skills, and Redjohn for being my Jedi master and helping with the ways of the ~~force~~ web.
@@ -29,8 +32,8 @@ These are writeups to challenges I solved for this CTF. We as a team did pretty 
 
 # Crypto
 ## Goose Chase
-> There's no stopping this crazy goose.  
-> **\<chall.png\>**  
+> There's no stopping this crazy goose.
+> **\<chall.png\>**
 > **\<goose_stole_the_key.png\>**
 
 Opening the two files, we see:
@@ -161,8 +164,8 @@ Flag is `castorsCTF{k33p_y0ur_k3y5_53cr37_4nd_d0n7_r3u53_7h3m!}`.
 &nbsp;
 
 ## Warmup
-> you know what to do  
-> **\<warmup_chall.png\>**  
+> you know what to do
+> **\<warmup_chall.png\>**
 > **\<warmup_chall.txt\>**
 
 The two attached files are:
@@ -277,7 +280,7 @@ I really liked this take on a usually boring/routine RSA task. Kudos to the auth
 &nbsp;
 
 ## Two Paths
-> The flag is somewhere in these woods, but which path should you take?  
+> The flag is somewhere in these woods, but which path should you take?
 > **\<two-paths.png\>**
 
 All we get is the PNG on this one. Opening it up, we see it just looks like a typical image for Robert Frost's [The Road Not Taken](https://www.poetryfoundation.org/poems/44272/the-road-not-taken) poem:
@@ -469,7 +472,7 @@ Flag is `castorsCTF{sancocho_flag_qjzmlpg}`
 &nbsp;
 
 ## Jigglypuff's Song
-> Can you hear Jigglypuff's song?  
+> Can you hear Jigglypuff's song?
 > **\<jigglypuff_chall.png\>**
 
 Again, all we get is a PNG:
@@ -832,7 +835,7 @@ undefined8 main(undefined8 argc, char **argv){
     int64_t var_54h;
     int64_t var_40h;
     int64_t var_8h;
-    
+
     iVar1 = *(int64_t *)(in_FS_OFFSET + 0x28);
     printf(0x9d4);
     fgets(&var_40h, 0x2c, _reloc.stdin);
@@ -1499,11 +1502,11 @@ Flag is `castorsCTF{$imPl3_sTUph_3h?}`.
 Connecting to the endpoint gives us:
 
 ```
-\  ___/\ \    /\  __ \/\  ___\     /\  ___\/\  __ \/\  __-./\  ___\   
-\ \  __\ \ \___\ \  __ \ \ \__ \    \ \ \__ \ \ \/\ \ \ \/\ \ \___  \  
- \ \_\  \ \_____\ \_\ \_\ \_____\    \ \_____\ \_____\ \____-\/\_____\ 
-  \/_/   \/_____/\/_/\/_/\/_____/     \/_____/\/_____/\/____/ \/_____/ 
-                                                                                                                                                             
+\  ___/\ \    /\  __ \/\  ___\     /\  ___\/\  __ \/\  __-./\  ___\
+\ \  __\ \ \___\ \  __ \ \ \__ \    \ \ \__ \ \ \/\ \ \ \/\ \ \___  \
+ \ \_\  \ \_____\ \_\ \_\ \_____\    \ \_____\ \_____\ \____-\/\_____\
+  \/_/   \/_____/\/_/\/_/\/_____/     \/_____/\/_____/\/____/ \/_____/
+
 
 We have a small problem...
 The flag gods are trying to send us a message, but our transmitter isn't calibrated to

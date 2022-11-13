@@ -3,7 +3,10 @@ title: "csawCTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 CSAW capture the flag competition."
 date: 2020-09-13T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/csaw-writeups"
+tags:
+ - ctfs
 ---
 
 # csawCTF 2020

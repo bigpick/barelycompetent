@@ -3,7 +3,10 @@ title: "UTCTF Live 2020 Writeups"
 excerpt: "Writeups for various challenges I solved during the UTCTF capture the flag competition."
 date: 2020-03-09T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/utctf-writeups"
+tags:
+ - ctfs
 ---
 
 # 2020 UTCTF Live Capture The Flag

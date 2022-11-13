@@ -3,7 +3,10 @@ title: "NahamCon CTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 nahamCon CTF capture the flag competition."
 date: 2020-06-13T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/nahamcon-writeups"
+tags:
+ - ctfs
 ---
 
 # NahamCon CTF 2020
@@ -70,7 +73,7 @@ Flag is `flag{user_agents_undercover}`.
 > BooOooOooOOoo! This spooOoOooky client-side cooOoOode sure is scary! What spoOoOoOoky secrets does he have in stooOoOoOore??
 >
 > Connect here:
-> http://jh2i.com:50003  
+> http://jh2i.com:50003
 > Note, this flag is not in the usual format.
 
 Web page looks like:

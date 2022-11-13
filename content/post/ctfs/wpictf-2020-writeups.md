@@ -3,7 +3,10 @@ title: "WPICTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 WPICTF capture the flag competition."
 date: 2020-04-17T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/wpictf-writeups"
+tags:
+ - ctfs
 ---
 
 # WPI CTF 2020

@@ -3,7 +3,10 @@ title: "HTB Cyber Apocalypse 2021"
 excerpt: "Writeups for problems solved by gp for the 2021 Hack The Box Cyber Apocalypse CTF competition."
 date: 2021-04-23T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2021/htb-cyber-apocalypse-writeups"
+tags:
+ - ctfs
 ---
 
 ## Intro
@@ -11,10 +14,10 @@ categories:
 > Cyber Apocalypse 2021
 >
 > Mon, 19 April 2021, 08:00 EDT — Fri, 23 April 2021, 14:00 EDT
-> 
+>
 > 22 April is International Earth Day and guess what… The Earth was hacked by malicious extraterrestrials. Their ultimate plan is to seize control of our planet. It’s only you who can save us from this terrible fate.
 >
-> Team Size: 1-10  
+> Team Size: 1-10
 > Difficulty: Beginner to Intermediate
 >
 > For every challenge that gets at least one solve, Hack The Box will be making a donation to Code.org. Your goal is to hack as much as possible to help us support Code.org's mission.
@@ -68,7 +71,7 @@ Alien camp 👾
 
 1. ❓
 2. Take test!
-> 
+>
 ```
 
 So we have to play a game, where we're given a set of Emoji variables (and their values) and a set of functions we need to solve with basic math involving those variables:
@@ -537,7 +540,7 @@ fn main() -> std::io::Result<()> {
 
 So, this time around, the _aliens_ are no longer using a provided static seed (notice `get_rng()`). Instead, the RNG is being seeded with a SystemTime timestamp, with second resolution, since epoch. So the RNG was seeded with the time the program was run originally.
 
-We know when the CTF _started_, so we know that the time has to be before that. It's probably also the case that the program was run relatively close to that start time (so that we have a feasible way of reversing the seed). 
+We know when the CTF _started_, so we know that the time has to be before that. It's probably also the case that the program was run relatively close to that start time (so that we have a feasible way of reversing the seed).
 
 Thus, to reverse the "random" seed, we can just get the second timestamp from the time of the official CTF start, and work backwards by 1 second, checking the RNG generations until we hit the seed that generated the same values as the challenge.
 
@@ -681,7 +684,7 @@ So, the flag is `CHTB{1nsp3ction_c4n_r3ve4l_us3full_1nf0rm4tion}`.
 >
 > This challenge will raise 33 euros for a good cause.
 
-We have a docker instance, and the full source code of the challenge. 
+We have a docker instance, and the full source code of the challenge.
 
 Looking at the given `index.php`:
 
@@ -773,7 +776,7 @@ document.getElementById("command").addEventListener('keydown', (e) => {
 });
 {{< / highlight >}}
 
-So, basically whatever we input, it generates into a [Javascript URL (via `new URL(host);`)](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL). Then it goes out and fetches those contents. 
+So, basically whatever we input, it generates into a [Javascript URL (via `new URL(host);`)](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL). Then it goes out and fetches those contents.
 
 For example, giving `http://www.example.com` we get that site:
 
@@ -787,7 +790,7 @@ Trying `file:///etc/passwd`, we get the file contents!
 
 {{< image src="/img/cyber_apocalypse/gp/curl_passwd.png" alt="curl_passwd.png" position="center" style="border-radius: 8px;" >}}
 
-Sweet. Now it's just a matter of finding the path to the flag. I tried `/flag` initially, and that gave the flag right away:) 
+Sweet. Now it's just a matter of finding the path to the flag. I tried `/flag` initially, and that gave the flag right away:)
 
 * `file:///flag`
 

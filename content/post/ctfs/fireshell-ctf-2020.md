@@ -3,7 +3,10 @@ title: "FireShell CTF 2020"
 excerpt: "Writeups for various challenges I solved during the 2020 FireShell capture the flag competition."
 date: 2020-03-22T09:24:19-05:00
 categories:
- - Capture The Flag Writeups
+ - capture the flag writeups
+url: "/ctfs/2020/fireshell-writeups"
+tags:
+ - ctfs
 ---
 
 # Fireshell Capture The Flag 2020
