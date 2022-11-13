@@ -1,27 +1,78 @@
 ---
-title: "About"
+title: "About me"
 date: 2020-11-18T09:22:39-05:00
 ---
 
-# Hey, I'm George
+# I'm Zilla
 
-Currently writing software at [IBM](https://www.ibm.com) (since graduating in '18).
+Currently writing software at [IBM](https://www.ibm.com).
 
-When I'm not working, I'm either busy growing my skills (spending most of my free time focused on learning new things) or hanging out playing games (video, board, card). Right now I work on a team delivering Big Data platforms, solutions, and analytics; I've been working on creating and managing infrastructure and associated tooling to host highly available, mission critical software geared towards historical analysis of various Cloud platform services. Previously, I worked on a different team to help help deliver and publicly launch IBM's Next Generation Hybrid Cloud in it's first location, and then onwards to many more.
+I try to spend as much of my free time doing something productive, like
+practicing a new programming language or reading up on industry best
+practices.
 
-In my day-day, I do a lot of work in scripting languages (Python, Bash), but also write applications, which are usually in either Python, Scala, or Golang; In personal time, I enjoy using all those previously mentioned, along with currently learning [Rust](https://www.rust-lang.org/). I'd rate Python as my most used of all mentioned, but have dabbled in many of well known languages beyond those mentioned above... and like to think I can pick up any required new one rather quick. Vim is my editor and IDE of choice:)
+If I'm not being productive, I'm lounging playing video games (and
+waiting patiently for a kind donor to bestow me a new next gen graphics
+card :) ).
 
-In my personal learning time, I like spending most of it trying to crack passwords, playing around on TryHackMe or HackTheBox, or competing with my team [burner_herz0g](https://ctftime.org/team/63292) on capture the flag/cybersecurity events. I'd like to think I know at least a little about ML, but everyday I am amazed at how little I know in comparisons to some of my awesome colleagues (check out https://www.isaacleonard.com to see what I mean!)
+## Work
 
-Every year my colleagues and I take a week in August to work together on various events at the annual [Defcon](https://defcon.org/) conference. Our team has taken a step back this past year or so, so my contributions (and writeups) have stopped, but I'm making a concentrated effort to get back into things at the end of 2022. My personal favorite is participating in the "premier annual password cracking contest", [Crack Me If You Can](https://contest.korelogic.com/), put on by KoreLogic. I've played since 2020, and each year have learned and improved on the last one. Now if only someone wanted to give me a few dozen GPUs...
+I work on a team designing, building, and maintaining Big
+Data platforms. These platforms are being used to deliver corporation
+wide insights and analytics with direct executive management visibility.
 
-I implemented this website using a custom [dracula](https://draculatheme.com/) theme, but prefer using [tokyonight](https://github.com/folke/tokyonight.nvim) for all IDE/development purposes.
+My focus recently has been on the operationalization of the stack,
+focusing more on building a shared library of sane, tested code and
+scripts geared towards consistent building and delivery of all possible
+service code.
 
-> **Disclosure: This site includes my personal thoughts and work; the opinions expressed here are solely my own and not those of my employer.**.
+Previously, I worked on a different team to help help deliver and
+publicly launch IBM's Next Generation Hybrid Cloud in it's first
+location, and then onwards to many more.
+
+In my day-day, I do a lot of work in scripting languages (Python,
+Bash), but also write applications, which are usually in either
+Python, Scala, or Golang; In personal time, I enjoy using all those
+previously mentioned, along with currently learning
+[Rust](https://www.rust-lang.org/). Python is by far my most used, but
+I've at least dabbled in many well known languages beyond those
+mentioned above... and like to think I can pick up any required new
+one rather quick.
+
+Neovim is my editor and IDE of choice.
+
+## Fun
+
+I enjoy trying to crack passwords (only recreationally, for educational
+purposes), playing around on TryHackMe or HackTheBox, or competing
+with my team [burner_herz0g](https://ctftime.org/team/63292) on
+capture the flag/cybersecurity events.
+
+## Defcon
+
+Every year my colleagues and I take a week in August to work together
+on various events at the annual [Defcon](https://defcon.org/)
+conference. Our team has taken a step back this past year or so, so my
+contributions (and writeups) have stopped, but I'm making a
+concentrated effort to get back into things at the end of 2022.
+
+My personal favorite is participating in the "premier annual password
+cracking contest", [Crack Me If You Can](https://contest.korelogic.com/),
+put on by KoreLogic. I've played since 2020, and each year have learned
+and improved on the last one. Now if only someone wanted to give me a
+few dozen GPUs...
+
+## This site
+
+I implemented this website using a custom [dracula](https://draculatheme.com/)
+theme, but prefer using [Tokyonight](https://github.com/folke/tokyonight.nvim)
+or [Kanagawa](https://github.com/rebelot/kanagawa.nvim) for all
+IDE/development purposes.
 
 ---
 
-### Bio
+## Career
+
  * May 2022 - Present
    * Senior Backend Software Engineer @ [IBM](https://www.ibm.com/us-en/?ar=1)
  * March 2021 - Present
@@ -33,7 +84,6 @@ I implemented this website using a custom [dracula](https://draculatheme.com/) t
  * June 2017 - August 2017
    * Integration Research Intern @ [IBM](https://www.ibm.com/us-en/?ar=1)
 
-### Education
+## Education
 
- * September 2015 - May 2018
-   * BS in Computer Science @ [Clarkson University](https://www.clarkson.edu/)
+ * BS in Computer Science @ [Clarkson University](https://www.clarkson.edu/)

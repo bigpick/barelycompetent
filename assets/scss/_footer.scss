@@ -1,0 +1,75 @@
+/*
+ * ==============================================
+ * Footer
+ * ==============================================
+ */
+.footer {
+  color: $drac-quote;
+  padding: 40px 20px;
+  flex-grow: 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 760px;
+    max-width: 100%;
+
+    @media #{$media-size-tablet} {
+      flex-direction: column;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $drac-quote;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $drac-black;
+  }
+
+  [data-theme=dark] & {
+    color: $drac-quote;
+  }
+
+  [data-theme=light] & {
+    color: $drac-black;
+  }
+
+  &__content {
+    font-size: .8rem;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @media #{$media-size-tablet} {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    & > *:not(:last-child)::after {
+      content: "•";
+      padding: 0 5px;
+
+      @media #{$media-size-tablet} {
+          content: "";
+          padding: 0;
+      }
+    }
+
+    & > *:last-child {
+      padding: 0 0px;
+
+      @media #{$media-size-tablet} {
+          padding: 0;
+      }
+    }
+
+    &__disclaimer {
+      font-size: .7rem;
+      font-weight: bold;
+    }
+  }
+}

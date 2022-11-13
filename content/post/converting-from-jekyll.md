@@ -78,7 +78,7 @@ Here's a dirty little bit I used to just replace every original Jekyll image tag
 (Note: I am only sharing for how I handled this process... I do not recommend copy+pasting this, as it is an ugly mess, and likely not what you need)
 
 
-{{< code language="bash" title="Something something lazy..." expand="Show code" collapse="Hide code" isCollapsed="true" >}}
+{{< code language="bash" title="Weird script for being lazy" id="25" expand="Show code" collapse="Hide code" isCollapsed="true" >}}
 #!/usr/bin/env bash
 
 # VERY specific use case
