@@ -4,7 +4,7 @@ excerpt: "pwnable.kr challenge: flag"
 date: 2020-03-05T05:27:19-05:00
 categories:
  - pwn practice
-url: "/pwnable.kr/flag"
+url: "/pwnable-kr/flag"
 tags:
  - pwnable.kr
 ---

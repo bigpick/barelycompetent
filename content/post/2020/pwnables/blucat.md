@@ -4,7 +4,7 @@ excerpt: "pwnable.kr challenge: blukat"
 date: 2020-03-25T09:24:19-05:00
 categories:
  - pwn practice
-url: "/pwnable.kr/blukat"
+url: "/pwnable-kr/blukat"
 tags:
  - pwnable.kr
 ---

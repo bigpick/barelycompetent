@@ -4,7 +4,7 @@ excerpt: "pwnable.kr challenge: mistake"
 date: 2020-03-12T09:24:19-05:00
 categories:
  - pwn practice
-url: "/pwnable.kr/mistake"
+url: "/pwnable-kr/mistake"
 tags:
  - pwnable.kr
 ---

@@ -2,7 +2,7 @@
 title: "Intro to ARM assembly"
 date: 2020-03-11T09:24:19-05:00
 excerpt: "pwnable.kr challenge: leg (lol)"
-url: "/pwnable.kr/leg-arm-assembly-intro"
+url: "/pwnable-kr/leg-arm-assembly-intro"
 categories:
  - pwn practice
 tags:

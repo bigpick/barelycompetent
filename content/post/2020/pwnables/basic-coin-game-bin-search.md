@@ -2,7 +2,7 @@
 title: "Game time! Classic interview coin question"
 excerpt: "pwnable.kr challenge: coin"
 date: 2020-03-18T09:24:19-05:00
-url: "/pwnable.kr/coin"
+url: "/pwnable-kr/coin"
 categories:
  - pwn practice
 tags:

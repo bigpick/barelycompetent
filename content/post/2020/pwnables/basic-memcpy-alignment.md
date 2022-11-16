@@ -2,7 +2,7 @@
 title: "memcpy: Intro to memory alignment"
 excerpt: "pwnable.kr challenge: memcpy"
 date: 2020-03-26T09:24:19-05:00
-url: "/pwnable.kr/memcpy"
+url: "/pwnable-kr/memcpy"
 categories:
  - pwn practice
 tags:

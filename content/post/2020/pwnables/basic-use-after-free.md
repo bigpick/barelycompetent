@@ -4,7 +4,7 @@ excerpt: "pwnable.kr challenge: uaf"
 date: 2020-03-24T09:24:19-05:00
 categories:
  - pwn practice
-url: "/pwnable.kr/uaf"
+url: "/pwnable-kr/uaf"
 tags:
  - pwnable.kr
 ---

@@ -4,7 +4,7 @@ excerpt: "As Wiz Khalifa once said: Knock, knock you about to get SHELLSHOCKED!"
 date: 2020-03-16T09:24:19-05:00
 categories:
  - pwn practice
-url: "/pwnable.kr/shellshock"
+url: "/pwnable-kr/shellshock"
 tags:
  - pwnable.kr
  - "historic exploits"

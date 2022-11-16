@@ -2,7 +2,7 @@
 title: "Intro to File Descriptors"
 excerpt: "pwnable.kr challenge: fd"
 date: 2020-03-03T05:27:19-05:00
-url: "/pwnable.kr/fd"
+url: "/pwnable-kr/fd"
 categories:
  - pwn practice
 tags:

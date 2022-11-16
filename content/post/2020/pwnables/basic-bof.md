@@ -2,7 +2,7 @@
 title: "Basic Buffer Overflow Vulnerability"
 excerpt: "pwnable.kr challenge: bof"
 date: 2020-03-04T02:41:11-05:00
-url: "/pwnable.kr/bof"
+url: "/pwnable-kr/bof"
 categories:
  - pwn practice
 tags:

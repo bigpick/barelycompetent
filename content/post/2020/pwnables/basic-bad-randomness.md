@@ -2,7 +2,7 @@
 title: "Basic Bad 'Random' Number Generator Vulnerability"
 excerpt: "pwnable.kr challenge: random"
 date: 2020-03-07T09:24:19-05:00
-url: "/pwnable.kr/random"
+url: "/pwnable-kr/random"
 categories:
  - pwn practice
 tags:

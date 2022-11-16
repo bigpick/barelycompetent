@@ -2,7 +2,7 @@
 title: "Using Various Linux Input systems in a single executable"
 excerpt: "pwnable.kr challenge: input"
 date: 2020-03-11T09:24:19-05:00
-url: "/pwnable.kr/input"
+url: "/pwnable-kr/input"
 categories:
  - pwn practice
 tags:

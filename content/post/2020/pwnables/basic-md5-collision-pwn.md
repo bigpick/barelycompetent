@@ -2,7 +2,7 @@
 title: "Basic MD5 Collisons"
 date: 2020-03-02T09:24:19-05:00
 excerpt: "pwnable.kr challenge: collision"
-url: "/pwnable.kr/collision"
+url: "/pwnable-kr/collision"
 categories:
  - pwn practice
 tags:
