@@ -10,6 +10,8 @@
 @import "./headers";
 @import "./collapsable_code";
 @import "./scroll_top";
+@import "./post";
+@import "./fixed_sidebar";
 
 body {
   font-family: "Slabo", "Iosevka Slab", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
@@ -140,6 +142,7 @@ em, i, strong {
       border-bottom: 1px $curr-line dashed;
     }
   }
+
 
   .post-title{
     font-size: 1.2rem;

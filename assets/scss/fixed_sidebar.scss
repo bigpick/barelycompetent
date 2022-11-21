@@ -1,0 +1,121 @@
+.text-active {
+  font-weight: bold;
+  font-size: 1.1rem;
+  @media (prefers-color-scheme: dark) {
+    color: $purple;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $light-color-variant;
+  }
+
+  [data-theme=dark] & {
+    color: $orange;
+  }
+
+  [data-theme=light] & {
+    color: $light-color-variant;
+  }
+}
+
+#toc {
+    float: left;
+    z-index: 20;
+    width: 260px;
+    padding-left: 10px;
+    text-align: left;
+    font-size: .9rem;
+    display: flex;
+    text-decoration: none !important;
+    margin-left: 0px;
+
+    ul {
+      @media (max-width: 1100px) {
+        float: none;
+        width: 100px;
+        margin-left: 5px;
+      }
+      margin-left: 15px;
+      li {
+        margin-left: 15px;
+      }
+      list-style-type: none;
+      a {
+        text-decoration: none !important;
+      }
+    }
+}
+
+#toc .tocLinks {
+    position: fixed;
+    width: 260px;
+    list-style-type: none;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    //white-space: nowrap;
+    white-space: wrap;
+    overflow: auto;
+
+    @media (max-width: 1400px) {
+     float: none;
+     width: 240px;
+    }
+
+    @media (max-width: 1300px) {
+     float: none;
+     width: 190px;
+    }
+
+    @media (max-width: 1200px) {
+     float: none;
+     width: 160px;
+    }
+
+    @media (max-width: 1100px) {
+     float: none;
+     width: 100px;
+    }
+
+    @media (max-width: 1000px) {
+     display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      scrollbar-color: $white $drac-black;
+    }
+
+    @media (prefers-color-scheme: light) {
+      scrollbar-color: $drac-black $white;
+    }
+
+    [data-theme=dark] & {
+      scrollbar-color: $white $drac-black;
+    }
+
+    [data-theme=light] & {
+      scrollbar-color: $drac-black $white;
+    }
+
+
+}
+
+.tocLinks h5 {
+    font-size: 1.3rem;
+    margin-bottom: -10px;
+    margin-top: 10px;
+    @media (prefers-color-scheme: dark) {
+      color: $white;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $light-color-variant;
+    }
+
+    [data-theme=dark] & {
+      color: $orange;
+    }
+
+    [data-theme=light] & {
+      color: $light-color-variant;
+    }
+}

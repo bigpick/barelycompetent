@@ -4,7 +4,7 @@ description: "Thought process and solution for day three of the 2021 Advent of C
 date: 2021-12-08T09:24:19-05:00
 url: "/advent-of-code/2021/day-four"
 type:
- - post
+ - posts
 categories:
  - Advent Of Code
 tags:
@@ -23,7 +23,9 @@ tags:
 
 Welcome back for the second day of my [Advent of Code](https://adventofcode.com/2021) musings and solutions; If this is your first time reading a post in the series, be sure to [check out the full set of posts]() to see the other days' solutions. Without further ado, let's get into today's problems.
 
-## [--- Day 4: Giant Squid ---](https://adventofcode.com/2021/day/4)
+## Day 4: Giant Squid
+
+(https://adventofcode.com/2021/day/4)
 
 ### Day 4:1 problem
 
