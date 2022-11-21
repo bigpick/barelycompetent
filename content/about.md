@@ -1,5 +1,6 @@
 ---
 title: "About me"
+type: posts
 date: 2020-11-18T09:22:39-05:00
 ---
 
