@@ -39,6 +39,79 @@ tags:
 >
 > `nc abhs.bctf23-codelab.kctf.cloud 1337`
 
+Accessing the box:
+
+```bash
+== proof-of-work: disabled ==
+== A Bonkers Homemade Shell ==
+$ ls
+chal.py
+flag.txt
+wrapper.sh
+
+$ whoami
+sh: 1: ahimow: not found
+
+$ pwd
+sh: 1: dpw: not found
+
+$ ls -alrt
+total 20
+-rw-r--r-- 1 nobody nogroup   93 Mar 15 00:18 flag.txt
+-rw-r--r-- 1 nobody nogroup  349 Mar 15 00:18 chal.py
+-rw-r--r-- 1 nobody nogroup   43 Mar 17 19:39 wrapper.sh
+drwxr-xr-x 3 nobody nogroup 4096 Mar 17 19:40 ..
+drwxr-xr-x 2 nobody nogroup 4096 Mar 17 19:40 .
+
+$ cat flag.txt
+sh: 1: act: not found
+
+$ act
+sh: 1: act: not found
+
+$ tac
+sh: 1: act: not found
+```
+
+It seemed that the box was reversing certain letters in commands for
+whatever reason. After playing around on the box for a while, my team
+member realized that it was based on alphabetical order. Things like
+`ls` and `dd` worked because they were in alphabetical order already.
+
+But doing something like `dd -if` is no longer in order, so the command
+gets mangled:
+
+```bash
+$ dd -h
+dd: invalid option -- 'h'
+Try 'dd --help' for more information.
+
+$ dd if=flag.txt
+dd: unrecognized operand ‘.=affgilttx’
+Try 'dd --help' for more information.
+```
+
+After more messing, I found we could use `"*"t` to be able to expand
+into `flag.txt`. So all we needed now was a command that could
+read a file, and was in alphabetical order.
+
+After 5 seconds my teammate suggested `pr` (which I, a zillenial had
+never heard of nor used). Sure enough:
+
+```
+$ pr "*"t
+
+
+2023-03-15 00:18                     flag.txt                     Page 1
+
+
+#bctf{gr34t_I_gu3ss_you_g0t_that_5orted_out:P}
+#
+#comments so that you cannot just exec this
+...
+```
+
+We got the flag. Flag is `bctf{gr34t_I_gu3ss_you_g0t_that_5orted_out:P}`.
 
 #### no-copy-allowed
 
@@ -100,3 +173,4 @@ printf("%s)",/*progra*/H+304);return/*UwU*/0**"^O{(u4X"
 > My first flask app, I hope you like it
 >
 > http://ctf.b01lers.com:5115
+
