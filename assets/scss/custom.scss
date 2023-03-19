@@ -10,10 +10,12 @@
 @import "./headers";
 @import "./collapsable_code";
 @import "./scroll_top";
+@import "./post";
+@import "./fixed_sidebar";
 
 body {
   font-family: "Slabo", "Iosevka Slab", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
-  font-weight: 400 !important;
+  font-weight: 400;
   font-size: 1.2rem;
 }
 
@@ -76,6 +78,7 @@ em, i, strong {
 .post-content {
   p {
     text-align: justify;
+    line-height: 1.7rem;
   }
 
   table {
@@ -141,6 +144,7 @@ em, i, strong {
     }
   }
 
+
   .post-title{
     font-size: 1.2rem;
   }
@@ -169,18 +173,6 @@ em, i, strong {
         background: $green;
     }
   }
-}
-
-/*
- * ==============================================
- * main / _main contents
- * ==============================================
- */
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  font-weight: 400;
 }
 
 p a {
@@ -405,16 +397,6 @@ blockquote {
     border-left: 3px solid $code-dark-bg;
   }
 }
-
-/**
- * Firefox specific rule
- */
-@-moz-document url-prefix() {
-  body {
-    font-weight: lighter !important;
-  }
-}
-
 
 /*
  * ==============================================

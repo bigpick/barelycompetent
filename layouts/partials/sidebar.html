@@ -1,0 +1,9 @@
+{{ with .TableOfContents }}
+<aside id="toc" class=".d-none .d-lg-block .d-xl-none">
+  <div class="tocLinks">
+        <h5>Table of Contents</h5>
+        {{ . }}
+  </div>
+</aside>
+<script src="/js/toc_scroller.js"></script>
+{{ end }}

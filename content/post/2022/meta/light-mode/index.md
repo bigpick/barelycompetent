@@ -2,6 +2,10 @@
 title: "Dracula enters the light?"
 date: 2022-11-13T01:24:55-05:00
 url: "/meta/adding-light-mode"
+Description: |
+  I finally crumbled and decided to add a light mode to my site.
+  Here are my thoughts on the process.
+type: posts
 categories:
  - meta
 ---
@@ -61,7 +65,7 @@ Since the link color is going to be used sparsely, I was fine with using
 a "non-Dracula" shade of blue (`#0F62FE`), which fairs much better (it
 still fails level AAA).
 
-### URL and Search Engine Optimizations (SEO) optimizations
+### URL and Search Engine Optimizations (SEO)
 
 I try to keep my local files organized by date, and sub-categorized by
 category, so when I saw that this site supported automatically stubbing

@@ -88,7 +88,7 @@ disableHugoGeneratorInject = false
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
   #
   customCSS = []
-  customJS  = ["/js/button.js"]
+  customJS  = ["/js/button.js", "/js/toc_scroller.js"]
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   #
@@ -171,3 +171,9 @@ disableHugoGeneratorInject = false
     name       = "Tags"
     url        = "tags/"
     weight     = 20
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 1
