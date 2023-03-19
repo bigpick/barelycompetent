@@ -122,8 +122,6 @@ We got the flag. Flag is `bctf{gr34t_I_gu3ss_you_g0t_that_5orted_out:P}`.
 Accessing the page, we get a site that displays some text that needs
 to be entered:
 
-{{< image src="/img/CTFs/2023/b01lers/no_copy_home.png" alt="no_copy_home.png" position="center" style="border-radius: 8px;" >}}
-
 In HTML:
 
 ```html
