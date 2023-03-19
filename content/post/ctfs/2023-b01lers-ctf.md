@@ -28,7 +28,7 @@ tags:
 
 | Misc                                | Rev                 | Web               |
 | ----------------------------------- | ------------------- | ----              |
-| [abhs](abhs)                        | [padlock](#padlock) | [warmup](#warmup) |
+| [abhs](#abhs)                       | [padlock](#padlock) | [warmup](#warmup) |
 | [no-copy-allowed](#no-copy-allowed) |                     |                   |
 
 ### Misc
@@ -119,6 +119,185 @@ We got the flag. Flag is `bctf{gr34t_I_gu3ss_you_g0t_that_5orted_out:P}`.
 >
 > http://ctf.b01lers.com:5125
 
+Accessing the page, we get a site that displays some text that needs
+to be entered:
+
+{{< image src="/img/CTFs/2023/b01lers/no_copy_home.png" alt="no_copy_home.png" position="center" style="border-radius: 8px;" >}}
+
+In HTML:
+
+```html
+<html>
+	<head>
+        <style>
+            @font-face {font-family:b;src:url("index.ttf")}
+            p, input { font-size:3vw; }
+            span { font-family:b;font-size:2vw; }
+            input { border: solid 0.4vw;width:60vw; }
+        </style>
+	</head>
+	<body>
+		<table width="100%" height="100%"><tbody><tr><td><center>
+            <p>Enter "<span>EIEjtvPAY0fxF4sviaIR90pgg9ob6gFGdBEUihkc</span>" to continue</p><input>
+		</center></td></tr></tbody></table>
+        <script>
+            var input = document.querySelector("input");
+            input.addEventListener("keypress", function(e) {
+                if (e.keyCode == 13) {
+                    window.location.href = input.value + ".html";
+                }
+            });
+        </script>
+	</body>
+</html>
+```
+
+Copy-pasting the EIE... value into the input box and then pressing enter
+brings us to a page at http://ctf.b01lers.com:5125/EIEjtvPAY0fxF4sviaIR90pgg9ob6gFGdBEUihkc.html
+
+This makes sense, since the block of code above that has the key code
+check is basically saying when you press the enter key (which is `13`),
+bring the user to the route that belongs to the value in the input box,
+plus `.html`.
+
+After a copy pages though, I realized there was going to be way too
+many to do manually, so I threw together something quick to automate
+the process:
+
+```bash
+stub=EIEjtvPAY0fxF4sviaIR90pgg9ob6gFGdBEUihkc
+while true; do
+    stub=$(curl "http://ctf.b01lers.com:5125/${stub}.html" | grep Enter | sed 's/.*<span>//g' | sed 's/<\/span.*//g')
+    echo "Fetching stub: $stub"
+done
+```
+
+... which broke after a couple seconds of running:
+
+```text
+...
+Fetching stub: x70OK5gxhlPEbhmRRmqhimTOSkTz3oAJUTo2VoC8
+Fetching stub: vBBEO.CpefN.TBsgS.HfjLG.wcZee.qZrhY.TDFdp.mBbei.IbHlG.tmXTZ.XqBtD.LYzBt.upRSj.EOzlj.izClL.oRdKf.CpefN.XceXS.mBbei.XqBtD.qPcfO.IbHlG.qZrhY.TDFdp.DMmXT.adNyQ.JkxgL.hhGEG.hhGEG.kcXxq.tmXTZ.yWzOK.EtLOl.adNyQ.NliRt.hMtRY.jNjpP.rAufC.EOzlj.yRfgC.
+```
+
+Looking at the page at , can see that the text we need to copy is no
+longer plain english chars?
+
+```html
+		<table width="100%" height="100%"><tbody><tr><td><center>
+            <p>Enter "<span>vBBEO.CpefN.TBsgS.HfjLG.wcZee.qZrhY.TDFdp.mBbei.IbHlG.tmXTZ.XqBtD.LYzBt.upRSj.EOzlj.izClL.oRdKf.CpefN.XceXS.mBbei.XqBtD.qPcfO.IbHlG.qZrhY.TDFdp.DMmXT.adNyQ.JkxgL.hhGEG.hhGEG.kcXxq.tmXTZ.yWzOK.EtLOl.adNyQ.NliRt.hMtRY.jNjpP.rAufC.EOzlj.yRfgC.</span>" to continue</p><input>
+		</center></td></tr></tbody></table>
+```
+
+The browser seems to indicate that it's not english, either. But translating
+to the suggested (Hungarian) also doesn't yield a value that when
+copy-pasted brings us to the next page.
+
+After a bit of looking, I noticed that the page source also included a
+custom font for each page, which seemed strange:
+
+```html
+        <style>
+            @font-face {font-family:b;src:url("x70OK5gxhlPEbhmRRmqhimTOSkTz3oAJUTo2VoC8.ttf")}
+            p, input { font-size:3vw; }
+            span { font-family:b;font-size:2vw; }
+            input { border: solid 0.4vw;width:60vw; }
+        </style>
+```
+
+Fetching that font file, and then opening/installing locally, it identifies
+as "ZXX Sans", which, after some searching, has interesting history:
+
+> ZXX is a disruptive typeface designed to be undetectable by text scanning software. It takes its name from the Library of Congress’ listing of three-letter codes denoting which language a book is written in, and code “ZXX” means “No linguistic content; Not applicable”. ZXX comes in 6 styles and was researched over the course of one year
+
+After a bit more researching on fonts, I came across the concept of a
+ligature substitution lookup table. Basically, a font has a concept of
+being able to take a set of chars after a given one, and convert the
+result to a specified glyph/ligature. It turns out that the format this
+is done with seemed identical to the text on the page: 5 letters followed
+by a period.
+
+After more searching, I decided on using https://github.com/fonttools/fonttools
+to be able to load the font file, search the glyph table, and return
+the resulting character.
+
+```python
+#!/usr/bin/env python3
+
+# type: ignore
+
+import requests
+from fontTools.ttLib import TTFont
+font = TTFont("./x70OK5gxhlPEbhmRRmqhimTOSkTz3oAJUTo2VoC8.ttf")
+
+text_to_num = {
+        "one": "1",
+        "two": "2",
+        "three": "3",
+        "four": "4",
+        "five": "5",
+        "six": "6",
+        "seven": "7",
+        "eight": "8",
+        "nine": "9",
+        "zero": "0",
+        "underscore": "_",
+        "braceleft": "{",
+        "braceright": "}"
+}
+
+def get_glyph(font, encoding):
+    lookup = font["GSUB"].table.LookupList.Lookup[0]
+    for char, glyphs in lookup.SubTable[0].ligatures.items():
+        for glyph in glyphs:
+            comp = char + "".join(glyph.__dict__["Component"]).replace("period", ".")
+            if comp == encoding:
+                g = glyph.__dict__["LigGlyph"]
+                return text_to_num.get(g, g)
+
+
+snippet = "x70OK5gxhlPEbhmRRmqhimTOSkTz3oAJUTo2VoC8"
+# snippet = "wDcIyytPUCxMxQB2YGrlQPDuASUp3ueyjeOnDswA" this is the flag page
+while 1<2:
+    to_fetch = f"http://ctf.b01lers.com:5125/{snippet}"
+    print(f"Fetching: {to_fetch}")
+
+    font_file = f"fonts/{snippet}.ttf"
+    with open(font_file, "wb") as outfile:
+        outfile.write(requests.get(to_fetch+".ttf").content)
+
+    font = TTFont(font_file)
+    resp = requests.get(to_fetch+".html")
+    print(resp.text)
+
+    if snippet != "wDcIyytPUCxMxQB2YGrlQPDuASUp3ueyjeOnDswA": # known block added after full successful run
+        challenge = [line for line in resp.text.split("\n") if "Enter " in line][0].split()[1][7:-8]
+        print("Challenge: ", challenge)
+        challenge = [entry for entry in challenge.split(".") if entry]
+
+        next_page = ""
+        for grouping in challenge:
+            next_page += get_glyph(font, grouping+".")
+        snippet = next_page
+    else:
+        break
+
+challenge = [line for line in resp.text.split("\n") if "<p>" in line][0].split()[0][3:-4]
+print("Challenge: ", challenge)
+challenge = [entry for entry in challenge.split(".") if entry]
+
+next_page = ""
+for grouping in challenge:
+    next_page += get_glyph(font, grouping+".")
+print(f"Flag: {next_page}")
+```
+
+Running the above, we succesfully now can parse the ligature encoded
+pages. After running for an absurd number of iterations for no reason,
+we get to the page with the flag.
+
+Flag is `bctf{l1gatur3_4bus3_15_fun_X0UOBDvfRkKa99fEVloY0iYuaxzS9hj4rIFXlA3B}`.
+
 ### Rev
 
 #### padlock
@@ -166,6 +345,39 @@ printf("%s)",/*progra*/H+304);return/*UwU*/0**"^O{(u4X"
 "ogra*/H+304);return/*UwU*//*quine*/Q(/*random_stuf*/")
 ```
 
+Compile the program:
+
+```bash
+gcc -o quine quine.c
+```
+
+Run it. Simple brute force, application takes input, and will tell you `O` or
+`X` if the char of your input is correct, in order.
+
+Can just try every possible printable char starting from known flag prefix
+until we get `}`:
+
+```python
+#!/usr/bin/env python
+
+from string import printable
+
+from subprocess import run, PIPE
+
+known_so_far = 'bctf{'
+
+while 1<2:
+    for char in printable:
+        results = run("./quine "+known_so_far+char, shell=True, stdout=PIPE, stderr=PIPE)
+        if results.stdout:
+            score = results.stdout.decode().split("\n")[0][2:]
+            if len(score)-len(known_so_far) == 1 and score[-1] == "O":
+                known_so_far+=char
+                print(known_so_far)
+```
+
+Flag is `bctf{qu1n3_1s_4ll_ab0ut_r3p371t10n_4nD_m4n1pul4710n_OwO_OuO_UwU}`.
+
 ### Web
 
 #### warmup
@@ -174,3 +386,65 @@ printf("%s)",/*progra*/H+304);return/*UwU*/0**"^O{(u4X"
 >
 > http://ctf.b01lers.com:5115
 
+Visiting page:
+
+```html
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first flask app</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+<script>
+    console.log("")
+</script>
+<!-- debug.html -->
+</html>
+```
+
+Visiting `html.debug` (at `ZGVidWcuaHRtbA==` which is just it base64 encoded),
+we get a page that says "testing rendering for flask app.py".
+
+Trying to inspect the source code at app.py (`YXBwLnB5`), we get a result:
+
+```python
+
+from base64 import b64decode
+import flask
+
+app = flask.Flask(__name__)
+
+@app.route('/<name>')
+def index2(name):
+    name = b64decode(name)
+    if (validate(name)):
+        return "This file is blocked!"
+    try:
+        file = open(name, 'r').read()
+    except:
+        return "File Not Found"
+    return file
+
+@app.route('/')
+def index():
+    return flask.redirect('/aW5kZXguaHRtbA==')
+
+def validate(data):
+    if data == b'flag.txt':
+        return True
+    return False
+
+
+if __name__ == '__main__':
+    app.run()
+```
+
+So, we can't just request `flag.txt` base64 encoded since thats hardcoded
+blocked. Simply request `./flag.txt` (`Li9mbGFnLnR4dA==`).
+
+Flag is `bctf{h4d_fun_w1th_my_l4st_m1nut3_w4rmuP????!}`.
