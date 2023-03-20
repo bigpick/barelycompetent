@@ -1,5 +1,7 @@
 {{ if not .IsHome }}
 <footer class="footer">
+    <div class="giscus">
+    {{ partial "giscus.html" . }}
     <div class="footer__inner">
         <div class="footer__content">
             <span>&copy; {{ now.Format "2006" }}</span>
