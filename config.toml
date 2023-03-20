@@ -87,8 +87,9 @@ disableHugoGeneratorInject = false
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
   #
+  #customCSS = ["/css/giscus_style.css", "css/giscus_style.css"]
   customCSS = []
-  customJS  = ["/js/button.js", "/js/toc_scroller.js"]
+  customJS  = ["/js/button.js"]
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   #
@@ -105,6 +106,15 @@ disableHugoGeneratorInject = false
   footerLeft = "Powered by <a href=\"http://gohugo.io\">Hugo</a>"
   footerRight = "Inspired by <a href=\"https://github.com/rhazdon/hugo-theme-hello-friend-ng\">rhazdon</a>"
   footerBottom = "Thoughts expressed here are solely my own, and not those of my employer."
+
+  disable_comments = false
+  [params.giscus]
+    repo = "bigpick/barelycompetent"
+    repoID = "MDEwOlJlcG9zaXRvcnkzMzg5MDYyMDM="
+    categoryID = "DIC_kwDOFDNMW84CSoj3"
+    mapping = "pathname"
+    strict = "1"
+    reactionsEnabled = "1"
 
   # Colors for favicons
   #
