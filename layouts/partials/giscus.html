@@ -1,0 +1,7 @@
+{{- if isset .Site.Params "giscus" -}}
+  {{- if and (isset .Site.Params.giscus "repo") (not (eq .Site.Params.giscus.repo "" )) (eq (.Params.disable_comments | default false) false) -}}
+  <script>
+    {{ partial "js/giscus.js" . | safeJS }}
+  </script>
+  {{- end -}}
+{{- end -}}
