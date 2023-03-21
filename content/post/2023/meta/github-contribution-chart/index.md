@@ -1,6 +1,6 @@
 ---
 title: "The GitHub contribution chart is a lie."
-date: 2023-03-20T01:24:55-05:00
+date: 2023-03-21T01:24:55-05:00
 url: "/meta/stop-judging-github-contrib-graphs"
 Description: |
     "What's stopping your GitHub profile from looking like this?"
