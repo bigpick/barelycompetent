@@ -1,4 +1,7 @@
-{{ $dataJ := getJSON "https://api.github.com/repos/"  (.Get "repo")  "/contents/"  (.Get "file")  }}
+{{ $tok := getenv "HUGO_GH_TOK" }}
+{{ $url := printf "https://api.github.com/repos/%s/contents%s" (.Get "repo") (.Get "file") }}
+{{ $headers := dict "Authorization" (printf "Bearer %s" $tok) }}
+{{ $dataJ := getJSON $url $headers }}
 {{ $con := base64Decode $dataJ.content }}
 {{ if ne (.Get "lines") "" }}
   {{ $split_up := split $con "\n" }}
