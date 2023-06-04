@@ -1,7 +1,17 @@
 function getGiscusTheme() {
-  const theme = localStorage.getItem("theme");
-  const giscusTheme = theme === "dark" ? "dark" : "light";
-  return giscusTheme;
+  let theme;
+
+  if (window.matchMedia && (localStorage.getItem("theme") === null)) {
+    // Check if the dark-mode Media-Query matches
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      theme = "dark"
+    } else {
+      theme = "light"
+    }
+  } else {
+    theme = localStorage.getItem("theme");
+  }
+  return theme === "dark" ? "dark" : "light";
 }
 
 function setGiscusTheme() {

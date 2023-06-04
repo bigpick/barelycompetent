@@ -11,7 +11,7 @@ Description: |
     software!)
 type: posts
 categories:
- - meta
+ - docker
 ---
 
 {{< image src="/img/2023/meta/dockerfile-includes/meme.png" alt="A photo of the One Does not simply meme with the caption 'one does not simply include dockerfile'" position="center" style="border-radius: 8px;" >}}
