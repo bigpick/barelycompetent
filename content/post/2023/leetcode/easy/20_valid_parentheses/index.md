@@ -1,7 +1,7 @@
 ---
-title: "leetcode #14 (easy): Valid Parentheses"
+title: "leetcode #20 (easy): Valid Parentheses"
 date: 2023-06-06T01:24:55-05:00
-url: "/leetcode/easy/14-valid-parentheses"
+url: "/leetcode/easy/20-valid-parentheses"
 Description: |
     Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
     determine if the input string is valid.
