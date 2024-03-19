@@ -190,27 +190,6 @@ cd our-org-wide-submodule/linters-formatters-confs/python
     strict = true
     ```
 
-    ```ini
-    [mypy]
-    exclude = (?x)(
-        ^thriftgen.*
-        | ^generated.*
-        | ^\.venv.*
-        | ^\/direnv.*
-        | ^\.pipenv.*
-        | ^test/.*
-        | ^docs/.*
-    )
-    warn_no_return = true
-    warn_unreachable = true
-    ignore_missing_imports = false
-    disallow_any_unimported = true
-    disallow_untyped_calls = true
-    no_implicit_optional = true
-    show_error_codes = true
-    strict = true
-    ```
-
 * `cat pyrightconfig.json`
 
     ```json
