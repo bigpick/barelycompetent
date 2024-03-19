@@ -34,4 +34,5 @@ At the end of all input, if the stack still has items (openers missing closers),
 Included source code snippet from
 [https://github.com/bigpick/leetcode](https://github.com/bigpick/leetcode/blob/main/easy/python/000_0020_valid_parentheses/solution.py):
 
-{{< github repo="bigpick/leetcode" file="/easy/python/000_0020_valid_parentheses/solution.py" lang="python" options="linenos=true" >}}
+
+{{< github repo="bigpick/leetcode" file="/easy/python/000_020_valid_parentheses/solution.py" lang="python" options="linenos=true" >}}

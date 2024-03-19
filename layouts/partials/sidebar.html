@@ -1,3 +1,4 @@
+{{ if .Params.sidebar_toc }}
 {{ with .TableOfContents }}
 <aside id="toc" class=".d-none .d-lg-block .d-xl-none">
   <div class="tocLinks">
@@ -6,4 +7,5 @@
   </div>
 </aside>
 <script src="/js/toc_scroller.js"></script>
+{{ end }}
 {{ end }}

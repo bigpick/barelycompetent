@@ -3,9 +3,8 @@ title   = "Barely Competent Dev"
 languageCode = "en-us"
 theme = ["hello-friend-ng", "hugo-shortcode-gallery"]
 
-PygmentsCodeFences = true
 pygmentsCodefences = true
-PygmentsStyle = "dracula"
+pygmentsUseClasses = true
 
 ignorefiles = ["styles/*"]
 
@@ -156,6 +155,7 @@ disableHugoGeneratorInject = false
 
 [languages]
   [languages.en]
+  [languages.en.params]
     subtitle  = "Barely Competent Dev"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'

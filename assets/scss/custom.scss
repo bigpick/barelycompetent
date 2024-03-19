@@ -13,10 +13,13 @@
 @import "./post";
 @import "./fixed_sidebar";
 
+@import "./dracula_syntax";
+
+
 body {
-  font-family: "Slabo", "Iosevka Slab", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
+  font-family: "Slabo", "Iosevka Slab", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
 }
 
 .bi {
@@ -24,37 +27,41 @@ body {
 }
 
 .bi-link {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1rem;
+  height: 1rem;
   color: inherit;
 }
 
 
 // Custom sizing for homepage text
-.index-header{
+.index-header {
   font-size: 10rem;
 
   @media #{$media-size-tablet} {
-    font-size:6rem;
+    font-size: 6rem;
   }
 
   @media #{$media-size-phone} {
-    font-size:3rem;
+    font-size: 3rem;
   }
 
 }
 
 ::selection {
-  background: $purple; /* WebKit/Blink Browsers */
+  background: $purple;
+  /* WebKit/Blink Browsers */
   color: $background;
 }
 
 ::-moz-selection {
-  background: $purple; /* Gecko Browsers */
+  background: $purple;
+  /* Gecko Browsers */
   color: $background;
 }
 
-em, i, strong {
+em,
+i,
+strong {
   // Default
   color: $light-color-variant;
 
@@ -78,7 +85,7 @@ em, i, strong {
 .post-content {
   p {
     text-align: justify;
-    line-height: 1.7rem;
+    line-height: 1.6rem;
   }
 
   table {
@@ -88,7 +95,9 @@ em, i, strong {
     margin: 40px 0;
   }
 
-  table, th, td {
+  table,
+  th,
+  td {
     border: 1px dashed $curr-line;
     padding: 10px;
   }
@@ -145,8 +154,8 @@ em, i, strong {
   }
 
 
-  .post-title{
-    font-size: 1.2rem;
+  .post-title {
+    font-size: 1rem;
   }
 }
 
@@ -170,7 +179,7 @@ em, i, strong {
     background: $green;
 
     .dark-theme & {
-        background: $green;
+      background: $green;
     }
   }
 }
@@ -301,10 +310,11 @@ td a {
 
 /* Code font */
 code {
-  font-family: Iosevka,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+  font-family: Iosevka, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   background: $code-dark-bg;
   font-size: .9rem;
   color: $foreground;
+  border-radius: 1px;
 
   @media (prefers-color-scheme: dark) {
     color: $foreground;
@@ -317,18 +327,19 @@ code {
   }
 
   [data-theme=dark] & {
-    color: $foreground;
-    background: $code-dark-bg;
+    color: #BD93F9;
+    background: rgba(#BD93F9, .2);
   }
 
   [data-theme=light] & {
-    color: $foreground;
-    background: $code-dark-bg;
+    color: $code-dark-bg;
+    background: rgba($code-dark-bg, .15);
   }
 }
 
 pre {
   background: $code-dark-bg;
+
   @media (prefers-color-scheme: dark) {
     color: $foreground;
     background: $code-dark-bg;
@@ -348,10 +359,9 @@ pre {
     color: $foreground;
     background: $code-dark-bg;
   }
+
   code {
     font-size: .9rem;
-    color: $foreground;
-    line-height: 1.2rem !important;
 
     @media (prefers-color-scheme: dark) {
       color: $foreground;
@@ -370,13 +380,14 @@ pre {
 
     [data-theme=light] & {
       color: $foreground;
-      background: $code-dark-bg;
+      // background: $code-dark-bg;
     }
   }
 }
 
 blockquote {
   color: $drac-quote;
+
   @media (prefers-color-scheme: dark) {
     color: $drac-quote;
     border-left: 3px solid $cyan;
@@ -423,33 +434,40 @@ blockquote {
       &:nth-child(1):hover {
         .dark-theme & {
           :nth-child(1):hover {
-           color: $yellow;
+            color: $yellow;
           }
         }
+
         color: $yellow;
       }
+
       &:nth-child(2):hover {
         .dark-theme & {
           :nth-child(1):hover {
-           color: $pink;
+            color: $pink;
           }
         }
+
         color: $pink;
       }
+
       &:nth-child(3):hover {
         .dark-theme & {
           :nth-child(1):hover {
-           color: $cyan;
+            color: $cyan;
           }
         }
+
         color: $cyan;
       }
+
       &:nth-child(4):hover {
         .dark-theme & {
           :nth-child(1):hover {
-           color: $green;
+            color: $green;
           }
         }
+
         color: $green;
       }
     }
@@ -476,6 +494,7 @@ blockquote {
     background: $purple;
   }
 }
+
 // Firefox
 .scroller {
   overflow-y: scroll;
@@ -492,11 +511,13 @@ blockquote {
     stroke: $orange;
   }
 }
+
 #index-svg-Linkedin {
   :hover {
     stroke: $green;
   }
 }
+
 #index-svg-Email {
   :hover {
     stroke: $cyan;
@@ -509,52 +530,47 @@ blockquote {
  * Dracula specific Pygments additions
  * ==============================================
  */
-:root
-{
+:root {
   --background: #1d1e26;
-  --comment:    #6272A4;
+  --comment: #6272A4;
   --foreground: #F8F8F2;
-  --selection:  #8A8F98;
+  --selection: #8A8F98;
 
-  --cyan:       #8BE9FD;
-  --green:      #50FA7B;
-  --orange:     #FFB86C;
-  --pink:       #FF79C6;
-  --purple:     #BD93F9;
-  --red:        #FF5555;
-  --yellow:     #F1FA8C;
+  --cyan: #8BE9FD;
+  --green: #50FA7B;
+  --orange: #FFB86C;
+  --pink: #FF79C6;
+  --purple: #BD93F9;
+  --red: #FF5555;
+  --yellow: #F1FA8C;
 }
 
-pre::-webkit-scrollbar
-{
+pre::-webkit-scrollbar {
   width: 14px;
 }
 
-pre::-webkit-scrollbar-track
-{
+pre::-webkit-scrollbar-track {
   background-color: var(--curr-line);
   border-radius: 0px;
 }
 
-pre::-webkit-scrollbar-thumb
-{
+pre::-webkit-scrollbar-thumb {
   background-color: var(--comment);
   border-radius: 0px;
 }
 
 code[class*="language-"],
-pre[class*="language-"]
-{
+pre[class*="language-"] {
   text-shadow: none;
   font-family: Iosevka, PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     monospace;
-  font-size: 1rem;
+  font-size: .9rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1;
+  line-height: 1.1rem;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -567,5 +583,15 @@ pre[class*="language-"]
 }
 
 // Make no borders around code blocks
-.highlight table, .highlight tr, .highlight td { line-height: 1.2rem !important; border-spacing: 0; border-collapse: separate; padding: 0; }
-.highlight div { overflow: auto; }
+.highlight table,
+.highlight tr,
+.highlight td {
+  line-height: 1.2rem !important;
+  border-spacing: 0;
+  border-collapse: separate;
+  padding: 0;
+}
+
+.highlight div {
+  overflow: auto;
+}

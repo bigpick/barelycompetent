@@ -1,6 +1,7 @@
 .post {
   &-info {
     font-size: 1rem;
+
     @media (prefers-color-scheme: dark) {
       color: #f8f8f2; //$drac-quote;
     }
@@ -17,8 +18,9 @@
       color: #000000;
     }
   }
+
   &-excerpt {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: $drac-quote;
     font-style: italic;
     border-left: 3px solid $drac-quote;
