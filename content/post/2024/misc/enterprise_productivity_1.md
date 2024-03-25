@@ -13,6 +13,8 @@ sidebar_toc: true
 categories:
  - misc
  - career
+tags:
+ - career
 ---
 
 ## Background
