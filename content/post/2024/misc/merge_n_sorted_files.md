@@ -76,7 +76,7 @@ func main() {
     var dictionary = map[string]*bufio.Scanner{}
     var valuesDict = map[string]string{}
 
-    // List the generated flowlogs files
+    // Get list of files to merge
     generatedDir := "generated"
     dirPath, _ := filepath.Abs(generatedDir)
     files, err := os.ReadDir(generatedDir)
