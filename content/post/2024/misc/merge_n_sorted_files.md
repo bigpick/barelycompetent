@@ -58,9 +58,9 @@ func PrintMemUsage(msg string) {
 func ReadNextScannerLine(sc *bufio.Scanner) (line string, err error) {
     foundText := sc.Scan()
     if foundText {
-    return sc.Text(), nil
+        return sc.Text(), nil
     } else {
-    return "", io.EOF
+        return "", io.EOF
     }
 }
 
