@@ -17,9 +17,9 @@
 
 
 body {
-  font-family: "IBM Plex Sans", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Space Grotesk", "IBM Plex Sans", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .bi {
@@ -65,19 +65,19 @@ strong {
   // Default
   color: $light-color-variant;
 
-  @media (prefers-color-scheme: dark) {
-    color: $dark-color-variant;
-  }
-
-  @media (prefers-color-scheme: light) {
-    color: $light-color-variant;
-  }
-
   [data-theme=dark] & {
     color: $dark-color-variant;
   }
 
   [data-theme=light] & {
+    color: $light-color-variant;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $dark-color-variant;
+  }
+
+  @media (prefers-color-scheme: light) {
     color: $light-color-variant;
   }
 }
@@ -112,30 +112,21 @@ strong {
  * ==============================================
  */
 .header {
-
-  [data-theme=dark] & {
-    background-color: $drac-black;
-  }
-
-  [data-theme=light] & {
-    background-color: $drac-black;
-  }
-
   .theme-toggler {
-    @media (prefers-color-scheme: dark) {
-      color: $drac-quote;
-    }
-
-    @media (prefers-color-scheme: light) {
-      color: $white;
-    }
-
     [data-theme=dark] & {
       color: $white;
     }
 
     [data-theme=light] & {
       color: $drac-quote;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: $drac-quote;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $white;
     }
   }
 }
@@ -154,8 +145,14 @@ strong {
 
 
   .post-title {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
+    font-weight: 400;
   }
+}
+
+.post-title {
+  font-size: 3.5rem;
+  font-weight: 900;
 }
 
 
@@ -204,6 +201,15 @@ p a {
   }
 
   &:hover {
+    [data-theme=dark] & {
+      color: $cyan;
+    }
+
+    [data-theme=light] & {
+      color: $blue;
+      text-decoration-color: $blue;
+    }
+
     @media (prefers-color-scheme: dark) {
       color: $cyan;
     }
@@ -213,14 +219,6 @@ p a {
       text-decoration-color: $blue;
     }
 
-    [data-theme=dark] & {
-      color: $cyan;
-    }
-
-    [data-theme=light] & {
-      color: $blue;
-      text-decoration-color: $blue;
-    }
   }
 }
 
@@ -245,20 +243,20 @@ li a {
   }
 
   &:not(nav > ul > li > a):hover {
-    @media (prefers-color-scheme: dark) {
-      color: $cyan;
-    }
-
-    @media (prefers-color-scheme: light) {
-      color: $blue;
-      text-decoration-color: $blue;
-    }
-
     [data-theme=dark] & {
       color: $cyan;
     }
 
     [data-theme=light] & {
+      color: $blue;
+      text-decoration-color: $blue;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: $cyan;
+    }
+
+    @media (prefers-color-scheme: light) {
       color: $blue;
       text-decoration-color: $blue;
     }
@@ -270,14 +268,6 @@ td a {
   text-decoration-thickness: 1px;
   text-underline-offset: .2rem;
 
-  @media (prefers-color-scheme: dark) {
-    text-decoration-color: $cyan;
-  }
-
-  @media (prefers-color-scheme: light) {
-    text-decoration-color: $comment;
-  }
-
   [data-theme=dark] & {
     text-decoration-color: $cyan;
   }
@@ -286,21 +276,30 @@ td a {
     text-decoration-color: $comment;
   }
 
+  @media (prefers-color-scheme: dark) {
+    text-decoration-color: $cyan;
+  }
+
+  @media (prefers-color-scheme: light) {
+    text-decoration-color: $comment;
+  }
+
+
   &:hover {
-    @media (prefers-color-scheme: dark) {
-      color: $cyan;
-    }
-
-    @media (prefers-color-scheme: light) {
-      color: $blue;
-      text-decoration-color: $blue;
-    }
-
     [data-theme=dark] & {
       color: $cyan;
     }
 
     [data-theme=light] & {
+      color: $blue;
+      text-decoration-color: $blue;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: $cyan;
+    }
+
+    @media (prefers-color-scheme: light) {
       color: $blue;
       text-decoration-color: $blue;
     }
@@ -311,7 +310,7 @@ td a {
 code {
   font-family: Iosevka, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   background: $code-dark-bg;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: $foreground;
   border-radius: 1px;
 
@@ -339,16 +338,6 @@ code {
 pre {
   background: $code-dark-bg;
 
-  @media (prefers-color-scheme: dark) {
-    color: $foreground;
-    background: $code-dark-bg;
-  }
-
-  @media (prefers-color-scheme: light) {
-    color: $foreground;
-    background: $code-dark-bg;
-  }
-
   [data-theme=dark] & {
     color: $foreground;
     background: $code-dark-bg;
@@ -359,8 +348,19 @@ pre {
     background: $code-dark-bg;
   }
 
+  @media (prefers-color-scheme: dark) {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $foreground;
+    background: $code-dark-bg;
+  }
+
+
   code {
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     @media (prefers-color-scheme: dark) {
       color: $foreground;
@@ -386,25 +386,26 @@ pre {
 
 blockquote {
   color: $drac-quote;
+  font-size: 1.3rem;
 
   @media (prefers-color-scheme: dark) {
     color: $drac-quote;
-    border-left: 3px solid $cyan;
+    border-left: 3px solid $drac-quote;
   }
 
   @media (prefers-color-scheme: light) {
-    color: $code-dark-bg;
-    border-left: 3px solid $code-dark-bg;
+    color: $comment;
+    border-left: 3px solid $comment;
   }
 
   [data-theme=dark] & {
     color: $drac-quote;
-    border-left: 3px solid $cyan;
+    border-left: 3px solid $drac-quote;
   }
 
   [data-theme=light] & {
-    color: $code-dark-bg;
-    border-left: 3px solid $code-dark-bg;
+    color: $comment;
+    border-left: 3px solid $comment;
   }
 }
 
@@ -424,7 +425,7 @@ blockquote {
 
   &__inner {
     color: #8a8f98;
-    font-size: 1.1em;
+    font-size: 0.85em;
     background: transparent;
 
     li {
@@ -559,7 +560,7 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .post-excerpt {
-  font-size: 1.2rem;
+  @extend blockquote;
 }
 
 code[class*="language-"],
@@ -567,13 +568,13 @@ pre[class*="language-"] {
   text-shadow: none;
   font-family: Iosevka, PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     monospace;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;

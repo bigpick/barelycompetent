@@ -8,8 +8,6 @@ tags:
  - markdown
 ---
 
-# Markdown basics on this theme
-
 Some example `code`:
 
 ```python

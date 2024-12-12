@@ -1,109 +1,111 @@
+@import "./gradients";
+@import "./gradienttext";
+
 h1 {
-  font-size: 2.925rem;
-  font-family: "Staatliches";
+  font-size: 6rem;
+  font-family: "IBM Plex Sans Bold";
 
-  &:not(.text-gradient-drac-cyan-green) &:not(.text-gradient-drac-pink-purple) {
-    @media (prefers-color-scheme: dark) {
-      color: $purple;
-    }
+  @media (prefers-color-scheme: dark) {
+    @include text-gradient(".text-gradient-drac-cyan-green", linear-gradient(135deg, #80ffea 0%,#8aff80 100%));
+  }
 
-    @media (prefers-color-scheme: light) {
-      color: $light-color-variant;
-    }
+  @media (prefers-color-scheme: light) {
+    @include text-gradient(".text-gradient-drac-curr-back", linear-gradient(135deg, #44475A 0%, #282A36 100%))
+  }
 
-    [data-theme=dark] & {
-      color: $purple;
-    }
+  [data-theme=dark] & {
+    @extend .text-gradient-drac-pink-purple;
+  }
 
-    [data-theme=light] & {
-      color: $light-color-variant;
-    }
+  [data-theme=light] & {
+    @extend .text-gradient-drac-curr-back;
   }
 }
 
 h2 {
-  font-size: 1.925rem;
+  font-size: 3.5rem;
   color: $light-color-variant;
-  font-family: "Staatliches";
+  font-family: "IBM Plex Sans Bold";
 
   @media (prefers-color-scheme: dark) {
-    color: $purple;
+    @include text-gradient(".text-gradient-drac-cyan-green", linear-gradient(135deg, #80ffea 0%,#8aff80 100%));
   }
 
   @media (prefers-color-scheme: light) {
-    color: $code-dark-bg;
+    @include text-gradient(".text-gradient-drac-curr-back", linear-gradient(135deg, #44475A 0%, #282A36 100%))
   }
 
   [data-theme=dark] & {
-    color: $purple;
+    @extend .text-gradient-drac-cyan-green;
   }
 
   [data-theme=light] & {
-    color: $code-dark-bg;
+    @extend .text-gradient-drac-curr-back;
   }
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   color: $light-color-variant;
-  font-family: "Staatliches";
+  font-family: "IBM Plex Sans Bold";
 
   @media (prefers-color-scheme: dark) {
-    color: $pink;
+    @include text-gradient(".text-gradient-purple-cyan", linear-gradient(135deg, #9580ff 0%,#80ffea 100%))
   }
 
   @media (prefers-color-scheme: light) {
-    color: $curr-line;
+    @include text-gradient(".text-gradient-drac-curr-back", linear-gradient(135deg, #44475A 0%, #282A36 100%))
   }
 
   [data-theme=dark] & {
-    color: $pink;
+    @extend .text-gradient-drac-purple-cyan;
   }
 
   [data-theme=light] & {
-    color: $curr-line;
+    @extend .text-gradient-drac-curr-back;
   }
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: $light-color-variant;
-  font-family: "Staatliches";
+  font-family: "IBM Plex Sans Bold";
 
   @media (prefers-color-scheme: dark) {
-    color: $green;
+    @include text-gradient(".text-gradient-drac-pink-purple", linear-gradient(135deg, #fc80bf 0%,#9580ff 100%));
   }
 
   @media (prefers-color-scheme: light) {
-    color: $comment;
+    @include text-gradient(".text-gradient-drac-curr-back", linear-gradient(135deg, #44475A 0%, #282A36 100%))
   }
 
   [data-theme=dark] & {
-    color: $green;
+    @extend .text-gradient-drac-pink-purple;
   }
 
   [data-theme=light] & {
-    color: $comment;
+    @extend .text-gradient-drac-curr-back;
   }
 }
 
 h5 {
   color: $light-color-variant;
-  font-family: "Staatliches";
+  font-family: "IBM Plex Sans Bold";
+  font-size: 1.3rem;
 
   @media (prefers-color-scheme: dark) {
-    color: $yellow;
+    @include text-gradient(".text-gradient-drac-yellow-pink", linear-gradient(135deg, #feff80 0%,#fc80bf 100%));
   }
 
   @media (prefers-color-scheme: light) {
-    color: $light-color-variant;
+    @include text-gradient(".text-gradient-drac-curr-back", linear-gradient(135deg, #44475A 0%, #282A36 100%));
   }
 
   [data-theme=dark] & {
-    color: $yellow;
+    @extend .text-gradient-drac-yellow-pink;
   }
 
   [data-theme=light] & {
-    color: $light-color-variant;
+    @extend .text-gradient-drac-curr-back;
   }
 }
