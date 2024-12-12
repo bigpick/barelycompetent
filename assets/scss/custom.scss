@@ -505,19 +505,19 @@ blockquote {
  * Front page SVG individual highlighting
  * ==============================================
  */
-#index-svg-Github {
+a[title="Github"] {
   :hover {
     stroke: $orange;
   }
 }
 
-#index-svg-Linkedin {
+a[title="Linkedin"] {
   :hover {
     stroke: $green;
   }
 }
 
-#index-svg-Email {
+a[title="Email"] {
   :hover {
     stroke: $cyan;
   }
