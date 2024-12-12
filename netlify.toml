@@ -3,9 +3,9 @@ publish = "public"
 command = "hugo --gc --minify --ignoreCache"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.111.3"
+  HUGO_VERSION = "0.139.4"
 
 [context.production.environment]
-HUGO_VERSION = "0.111.3"
+HUGO_VERSION = "0.139.4"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "false"

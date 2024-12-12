@@ -66,7 +66,7 @@ For every line ("game") in the input,
 * return the dict lookup of the game outcome's score value added to the
   dict lookup of the player2's move value to a running sum (line 60)
 
-{{< github repo="bigpick/code-practice" lines="54-67" file="/2022/advent-of-code/python/src/aoc/day02.py" lang="python" options="linenostart=54,linenos=true" >}}
+{{< github repo="bigpick/code-practice" lines="54-67" file="/adventofcode/2022/python/src/aoc/day02.py" lang="python" options="linenostart=54,linenos=true" >}}
 
 
 ## Day two part two
@@ -115,13 +115,13 @@ For every line ("game") in the input,
   pre-pended to player2's move, see line 32 below), add it to the value
   of the expected outcome of the game, and sum
 
-{{< github repo="bigpick/code-practice" lines="70-85" file="/2022/advent-of-code/python/src/aoc/day02.py" lang="python" options="linenostart=70,linenos=true" >}}
+{{< github repo="bigpick/code-practice" lines="70-85" file="/adventofcode/2022/python/src/aoc/day02.py" lang="python" options="linenostart=70,linenos=true" >}}
 
 ## Python solution
 
 The source code presented below resides in my [GitHub repository for advent of code][].
 
-{{< github repo="bigpick/code-practice" file="/2022/advent-of-code/python/src/aoc/day02.py" lang="python" options="linenos=true" >}}
+{{< github repo="bigpick/code-practice" file="/adventofcode/2022/python/src/aoc/day02.py" lang="python" options="linenos=true" >}}
 
 
 [Github repository for advent of code]: <https://github.com/bigpick/code-practice/blob/main/2022/advent-of-code/python/src/aoc/day01.py>

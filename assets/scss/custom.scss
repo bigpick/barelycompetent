@@ -17,9 +17,9 @@
 
 
 body {
-  font-family: "Slabo", "Iosevka Slab", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "IBM Plex Sans", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .bi {
@@ -85,7 +85,6 @@ strong {
 .post-content {
   p {
     text-align: justify;
-    line-height: 1.6rem;
   }
 
   table {
@@ -155,7 +154,7 @@ strong {
 
 
   .post-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -171,7 +170,7 @@ strong {
   }
 
   &__text {
-    font-family: "Iosevka";
+    font-family: "Iosevka Term";
     color: $foreground;
   }
 
@@ -312,7 +311,7 @@ td a {
 code {
   font-family: Iosevka, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   background: $code-dark-bg;
-  font-size: .9rem;
+  font-size: 1rem;
   color: $foreground;
   border-radius: 1px;
 
@@ -361,7 +360,7 @@ pre {
   }
 
   code {
-    font-size: .9rem;
+    font-size: 1rem;
 
     @media (prefers-color-scheme: dark) {
       color: $foreground;
@@ -559,18 +558,22 @@ pre::-webkit-scrollbar-thumb {
   border-radius: 0px;
 }
 
+.post-excerpt {
+  font-size: 1.2rem;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
   text-shadow: none;
   font-family: Iosevka, PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     monospace;
-  font-size: .9rem;
+  font-size: 1.1rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.1rem;
+  line-height: 1.5rem;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
