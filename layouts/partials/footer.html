@@ -1,20 +1,17 @@
 {{ if not .IsHome }}
 <footer class="footer">
+    {{ if .IsPage }}
     <div class="giscus">
     {{ partial "giscus.html" . }}
+    </div>
+    {{ end }}
     <div class="footer__inner">
         <div class="footer__content">
+            <span style="color:#BD93F9;">&#10084 By: <a href="https://github.com/bigpick">bigpick</a> &#10084</span>
             <span>&copy; {{ now.Format "2006" }}</span>
-            {{ if .Site.Author.name }}
-                <span><a href="https://github.com/bigpick">{{ .Site.Author.name }}</a></span>
-            {{ end }}
             {{ if .Site.Copyright }}
                 <span>{{ .Site.Copyright| safeHTML }}</span>
             {{ end }}
-        </div>
-    </div>
-    <div class="footer__inner">
-        <div class="footer__content">
             <span>{{ .Site.Params.footerRight | default "Inspired by <a href=\"https://github.com/rhazdon/hugo-theme-hello-friend-ng\">rhazdon</a>" | safeHTML }}</span>
             <span>{{ .Site.Params.footerLeft | default "Powered by <a href=\"http://gohugo.io\">Hugo</a>" | safeHTML }}</span>
         </div>

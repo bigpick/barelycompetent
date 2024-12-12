@@ -7,6 +7,9 @@ $gradients: map-merge((
     drac-yellow-pink: linear-gradient(135deg, #feff80 0%,#fc80bf 100%),
     drac-cyan-green: linear-gradient(135deg, #80ffea 0%,#8aff80 100%),
     drac-pink-purple: linear-gradient(135deg, #fc80bf 0%,#9580ff 100%),
+    drac-back-black: linear-gradient(135deg, #282A36 0%, #000000 100%),
+    drac-curr-back: linear-gradient(135deg, #44475A 0%, #282A36 100%),
+    drac-comm-back: linear-gradient(135deg, #6272A4 0%, #282A36 100%),
 ), $gradients);
 
 // Gradient backgrounds
@@ -35,6 +38,7 @@ $gradients: map-merge((
     border-image-slice: 1;
   }
 }
+
 // Gradient Classes
 @each $gradient, $value in $gradients {
  @include bg-gradient(".bg-gradient-#{$gradient}", $value);

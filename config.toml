@@ -8,9 +8,9 @@ pygmentsUseClasses = true
 
 ignorefiles = ["styles/*"]
 
-paginate  = 20
 rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+#copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+copyright = "MIT License" # This message is only used by the RSS template.
 
 googleAnalytics = "UA-160596583-1"
 # disqusShortname = ""
@@ -43,15 +43,19 @@ disableHugoGeneratorInject = false
 [permalinks]
   post = "/:title"
 
-[author]
-  name = "George Pickering"
-
 [blackfriday]
   hrefTargetBlank = true
 
 [taxonomies]
   tag      = "tags"
   category = "categories"
+
+
+[pagination]
+  disableAliases = false
+  pagerSize = 20
+  path = 'page'
+
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -107,6 +111,10 @@ disableHugoGeneratorInject = false
   footerBottom = "Thoughts expressed here are solely my own, and not those of my employer."
 
   disable_comments = false
+
+  [params.author]
+    name = "George Pickering"
+
   [params.giscus]
     repo = "bigpick/barelycompetent"
     repoID = "MDEwOlJlcG9zaXRvcnkzMzg5MDYyMDM="

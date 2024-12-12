@@ -153,7 +153,7 @@ def find_priority_of_3sum(input: list[str]) -> int:
 
 The source code presented below resides in my [GitHub repository for advent of code][].
 
-{{< github repo="bigpick/code-practice" file="/2022/advent-of-code/python/src/aoc/day03.py" lang="python" options="linenos=true" >}}
+{{< github repo="bigpick/code-practice" file="/adventofcode/2022/python/src/aoc/day03.py" lang="python" options="linenos=true" >}}
 
 [Github repository for advent of code]: <https://github.com/bigpick/code-practice/blob/main/2022/advent-of-code/python/src/aoc/day03.py>
 [1]: <https://barelycompetent.dev/categories/advent-of-code/>

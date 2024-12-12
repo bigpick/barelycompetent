@@ -1,10 +1,25 @@
+{{ $content := "" }}
+{{ $data := dict }}
 {{ $tok := getenv "HUGO_GH_TOK" }}
+
+
 {{ $url := printf "https://api.github.com/repos/%s/contents%s" (.Get "repo") (.Get "file") }}
-{{ $headers := dict "Authorization" (printf "Bearer %s" $tok) }}
-{{ $dataJ := getJSON $url $headers }}
-{{ $con := base64Decode $dataJ.content }}
+{{ $opts := dict
+  "headers" (dict "Authorization" (printf "Bearer %s" $tok))
+}}
+{{ with resources.GetRemote $url $opts }}
+  {{ with .Err }}
+    {{ errorf "%s" . }}
+  {{ else }}
+    {{ $data = . | transform.Unmarshal }}
+    {{ $content = (index $data "content" | base64Decode) }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get remote resource %q" $url }}
+{{ end }}
+
 {{ if ne (.Get "lines") "" }}
-  {{ $split_up := split $con "\n" }}
+  {{ $split_up := split $content "\n" }}
   {{ $line_indices := split (.Get "lines") "-" }}
   {{ $start_index := int (index $line_indices 0) }}
   {{ $end_index := int (index $line_indices 1) }}
@@ -15,5 +30,5 @@
   {{ $joined_to_highlight := trim (delimit $to_highlight "\n") "\n" }}
   {{ highlight $joined_to_highlight (.Get "lang") (.Get "options") }}
 {{ else }}
-  {{ highlight $con (.Get "lang") (.Get "options") }}
+  {{ highlight $content (.Get "lang") (.Get "options") }}
 {{ end }}

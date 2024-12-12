@@ -28,6 +28,10 @@ focusing more on building a shared library of sane, tested code and
 scripts geared towards consistent building and delivery of all possible
 service code.
 
+I have also been heavily focused on owning, desiging, implementing, and
+maintaining our entire org's CI/CD approach, including the paradigms,
+infrastructure, scripts, tools, and all other required pieces.
+
 Previously, I worked on a different team to help help deliver and
 publicly launch IBM's Next Generation Hybrid Cloud in it's first
 location, and then onwards to many more.

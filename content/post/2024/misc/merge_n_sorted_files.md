@@ -12,8 +12,6 @@ tags:
  - golang
 ---
 
-## Background
-
 Given a directory of sorted files, join them into a single file that is also sorted.
 
 Requirements:
@@ -22,15 +20,13 @@ Requirements:
 
 ## Solution
 
-### rough outline
+* Get a reader on all the files in a dir.
+* Grab just first line from all of them.
+* Take the smallest, write line to open output file handler.
+* Read the next line from the file which we determined was the smallest.
+* Repeat until we've parsed through everything.
 
-* get a reader on all the files in a dir
-* grab just first line from all of them
-* take the smallest, write line to open output file handler
-* read the next line from the file which we determined was the smallest
-* repeat until we've parsed through everything
-
-### code
+### Code
 
 ```golang
 package main
