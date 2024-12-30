@@ -270,7 +270,9 @@ WORKDIR /root
 COPY --from=ubu2404-plox-builder /usr/local/bin/python3.11* /usr/local/bin/
 COPY --from=ubu2404-plox-builder /usr/local/lib/python3.11 /usr/local/lib/python3.11
 
-RUN apt-get update && apt-get upgrade -yq
+RUN apt-get update && apt-get upgrade -yq && \
+  ln -sf /usr/local/bin/python3.11 /usr/local/bin/python && \
+  ln -sf /usr/local/bin/python3.11 /usr/local/bin/python3
 ```
 
 > (The `--from=ubu2204-plox-builder` image name comes from information we specified in the
