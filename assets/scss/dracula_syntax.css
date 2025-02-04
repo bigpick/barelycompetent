@@ -1,5 +1,5 @@
-/* Background */ .bg { color:#f8f8f2;background-color:#282a36; }
-/* PreWrapper */ .chroma { color:#f8f8f2;background-color:#282a36; }
+/* Background */ .bg { color:#f8f8f2;background-color:#252733; }
+/* PreWrapper */ .chroma { color:#f8f8f2;background-color:#252733; }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err {  }
 /* CodeLine */ .chroma .cl {  }
@@ -7,7 +7,7 @@
 /* LineTableTD */ .chroma .lntd { vertical-align:top;padding:0;margin:0;border:0; }
 /* LineTable */ .chroma .lntable { border-spacing:0;padding:0;margin:0;border:0; }
 /* LineHighlight */ .chroma .hl { background-color:#3d3f4a }
-/* LineNumbersTable */ .chroma .lnt { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f }
+/* LineNumbersTable */ .chroma .lnt { font-size:1.1rem;line-height:1.5rem;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f }
 /* LineNumbers */ .chroma .ln { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f }
 /* Line */ .chroma .line { display:flex; }
 /* Keyword */ .chroma .k { color:#ff79c6 }

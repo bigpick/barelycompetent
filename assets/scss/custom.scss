@@ -597,6 +597,11 @@ pre::-webkit-scrollbar-thumb {
   @extend blockquote;
 }
 
+//.chroma .lntd {
+//  line-height: 1.5rem !important;
+//  font-size: 1.1rem !important;
+//}
+
 code[class*="language-"],
 pre[class*="language-"] {
   text-shadow: none;

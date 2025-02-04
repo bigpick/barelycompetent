@@ -7,11 +7,11 @@
 {{ $opts := dict
   "headers" (dict "Authorization" (printf "Bearer %s" $tok))
 }}
-{{ with resources.GetRemote $url $opts }}
+{{ with try (resources.GetRemote $url $opts) }}
   {{ with .Err }}
     {{ errorf "%s" . }}
   {{ else }}
-    {{ $data = . | transform.Unmarshal }}
+    {{ $data = .Value | transform.Unmarshal }}
     {{ $content = (index $data "content" | base64Decode) }}
   {{ end }}
 {{ else }}
