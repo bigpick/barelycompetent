@@ -1,0 +1,337 @@
+@import "../../scss/_variables";
+
+// _admonitions.scss
+// Hugo Admonitions Styling with Configurable Theme Colors and Dark Mode Selector
+
+// =============================================================================
+// --- Configuration (User Overridable) ---
+// =============================================================================
+
+// --- Dark Mode Activation ---
+// Define the CSS selector(s) used by the theme to indicate dark mode.
+$admonition-dark-selector: (
+  'html[data-theme="dark"]',
+  'body[data-theme="dark"]',
+  'html[data-bs-theme="dark"]',
+  'html[data-scheme="dark"]',
+  'body[data-scheme="dark"]',
+  'html[data-color-mode="dark"]',
+  'body[data-color-mode="dark"]',
+  "body.dark",
+  "body.dark-mode",
+  "body.theme-dark",
+  "html.dark",
+  "html.dark-mode"
+) !default;
+
+// --- Theme Colors ---
+// Define the colors used for admonition elements in both light and dark modes.
+
+// Light Mode Colors
+$admonition-light-bg: $light-background !default; // Content background
+$admonition-light-text: $dark-background !default; // Content text
+$admonition-light-code-bg: $dark-background !default; // Inline code & code block background
+$admonition-light-code-text: $foreground !default; // Inline code & code block text
+$admonition-light-blockquote-border: #e0e0e0 !default; // Blockquote left border
+
+// Dark Mode Colors
+$admonition-dark-bg: $dark-background !default; // Content background
+$admonition-dark-text: $foreground !default; // Content text
+$admonition-dark-code-bg: $dark-background !default; // Inline code & code block background
+$admonition-dark-code-text: $foreground !default; // Inline code & code block text
+$admonition-dark-blockquote-border: #45475a !default; // Blockquote left border
+
+// --- Header Background Opacity ---
+// Controls the opacity of the background color tint applied to the whole admonition block.
+// Value should be between 0 (transparent) and 1 (opaque).
+$admonition-light-header-bg-opacity: 0.1 !default; // Opacity for light mode background tint
+$admonition-dark-header-bg-opacity: 0.1 !default; // Opacity for dark mode background tint
+
+// =============================================================================
+// --- Base Type Colors (Module Internal) ---
+// =============================================================================
+$admonition-colors: (
+  abstract: $drac-quote,
+  caution: $orange,
+  code: $drac-quote,
+  conclusion: $drac-quote,
+  danger: $red,
+  error: $red,
+  example: $cyan,
+  experiment: $cyan,
+  goal: $green,
+  // Note: Same as caution by default
+  idea: #df8e1d,
+  important: $purple,
+  info: $comment,
+  memo: $comment,
+  // Note: Same as caution by default
+  note: #096ae1,
+  notify: #0d48bd,
+  question: #179299,
+  quote: #7287fd,
+  success: #40a02b,
+  task: #8839ef,
+  tip: #179299,
+  warning: #df8e1d,
+);
+
+// =============================================================================
+// --- Base Admonition Structure & Styles ---
+// =============================================================================
+
+.admonition {
+  margin: 1rem 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.admonition-header {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 4px 4px 0 0;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+
+  svg {
+    width: 1.1em;
+    height: 1.1em;
+    margin-right: 0.5rem;
+    fill: currentColor;
+    flex-shrink: 0;
+    transition: fill 0.3s ease;
+  }
+
+  span {
+    flex-grow: 1;
+  }
+}
+
+.admonition-content {
+  padding: 1rem;
+  border-radius: 0 0 4px 4px;
+  // Background-color and color are applied with higher specificity inside the @each loops.
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+
+  // Basic structure/spacing for nested elements
+  p {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+  }
+  blockquote {
+    margin: 0 0 0.75rem 0;
+    padding-left: 1rem;
+    border-left-width: 3px; // Set width here, color set below
+    border-left-style: solid;
+    font-style: italic;
+    transition: border-color 0.3s ease, color 0.3s ease; // Keep transitions
+  }
+  code:not(pre > code) {
+    // Inline code, excluding code blocks
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease; // Keep transitions
+  }
+  pre {
+    margin: 0 0 0.75rem 0;
+    padding: 0.8rem 1rem;
+    border-radius: 3px;
+    overflow-x: auto;
+    transition: background-color 0.3s ease; // Keep transition for pre bg
+
+    code {
+      // Code inside pre
+      background-color: transparent !important;
+      color: inherit;
+      padding: 0;
+      font-size: inherit;
+      border-radius: 0;
+    }
+  }
+  // Remove bottom margin from the last child inside content area
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// =============================================================================
+// --- Generate Admonition Type Styles (Light Mode Default) ---
+// =============================================================================
+@each $type, $color in $admonition-colors {
+  .admonition.#{$type} {
+    // e.g., .admonition.question
+    // Apply border color
+    border-left: 4px solid $color;
+    // Apply the TINTED background to the *entire* admonition block
+    background-color: rgba($color, $admonition-light-header-bg-opacity);
+
+    // Target the DIRECT child header
+    > .admonition-header {
+      // Set the header text color
+      color: $color;
+      // Explicitly set SVG fill color too
+      svg {
+        fill: $color;
+      }
+    }
+
+    // Target the DIRECT child content
+    > .admonition-content {
+      // Override the tinted background for the content area with the SOLID light theme bg
+      background-color: $admonition-light-bg;
+      color: $admonition-light-text;
+
+      // Apply light theme colors to nested elements WITHIN this specific admonition type
+      blockquote {
+        border-left-color: $admonition-light-blockquote-border;
+        color: inherit; // Inherit $admonition-light-text
+      }
+      code:not(pre > code) {
+        // Inline code
+        background-color: $admonition-light-code-bg;
+        color: $admonition-light-code-text;
+      }
+      pre {
+        background-color: $admonition-light-code-bg;
+        // Text color in pre > code usually handled by syntax highlighter
+        code {
+          color: $admonition-light-code-text;
+        } // Fallback color if needed
+      }
+    }
+  }
+}
+
+// =============================================================================
+// --- Dark Mode Styling ---
+// =============================================================================
+#{join($admonition-dark-selector, ", ")} {
+  @each $type, $color in $admonition-colors {
+    .admonition.#{$type} {
+      // e.g., html[data-theme="dark"] .admonition.question
+      // Apply the TINTED dark background to the *entire* admonition block
+      background-color: rgba($color, $admonition-dark-header-bg-opacity);
+
+      // Target the DIRECT child header
+      > .admonition-header {
+        // Header text color ($color) from light mode rule usually works.
+        // Uncomment below to explicitly override for dark mode if needed (e.g., for contrast).
+        // color: mix($color, $admonition-dark-text, 80%);
+        // svg {
+        //   fill: mix($color, $admonition-dark-text, 80%);
+        // }
+      }
+
+      // Target the DIRECT child content
+      > .admonition-content {
+        // Override the tinted background for the content area with the SOLID dark theme bg
+        background-color: $admonition-dark-bg;
+        color: $admonition-dark-text;
+
+        // Apply dark theme colors to nested elements WITHIN this specific admonition type
+        blockquote {
+          border-left-color: $admonition-dark-blockquote-border;
+          color: inherit; // Inherit $admonition-dark-text
+        }
+        code:not(pre > code) {
+          // Inline code
+          background-color: $admonition-dark-code-bg;
+          color: $admonition-dark-code-text;
+        }
+        pre {
+          background-color: $admonition-dark-code-bg;
+          // Text color in pre > code usually handled by syntax highlighter
+          code {
+            color: $admonition-dark-code-text;
+          } // Fallback color if needed
+        }
+      }
+    }
+  }
+}
+// --- End Dark Mode Styling ---
+
+// =============================================================================
+// --- Custom Admonition Folding Marker ---
+// =============================================================================
+.admonition {
+  // Target the summary element only when it's a direct child of a foldable admonition (<details>)
+  & > summary {
+    list-style: none; /* For Firefox */
+    &::-webkit-details-marker {
+      /* For Chrome, Safari, Edge */
+      display: none;
+    }
+    cursor: pointer;
+    position: relative; // Ensures it can stack if needed
+    z-index: 2; // Position above content background if overlapping occurs
+
+    &::after {
+      content: ">"; /* Use a simple chevron character */
+      display: inline-block; /* Allows transforms and margins */
+      font-weight: bold;
+      // Use margin-left to add space BEFORE the indicator (after the text)
+      margin-left: 0.6em; /* Adjust spacing as needed */
+      transition: transform 0.2s ease-in-out; /* Smooth rotation */
+      transform-origin: center; /* Rotate around the center */
+      // Inherit the color from the summary text (which gets set by header color rule)
+      color: currentColor;
+      // Optional: Adjust vertical alignment if needed
+      // vertical-align: middle;
+    }
+
+    // Prevent the title span from growing and pushing the ::after pseudo-element
+    // This should already be handled by the flex properties in .admonition-header
+    // & > span { flex-grow: 0; } // Re-add if marker gets pushed
+  }
+
+  &[open] > summary::after {
+    transform: rotate(90deg); /* Rotate the chevron down */
+  }
+}
+
+// --- Optional: Using SVG Icon Instead ---
+/*
+.admonition {
+  & > summary {
+    list-style: none;
+    &::-webkit-details-marker { display: none; }
+    cursor: pointer;
+
+    &::after { // Use ::after
+      content: "";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      margin-left: 0.6em; // Use margin-left
+      background-color: currentColor;
+      mask-image: url("path/to/your/chevron-right.svg");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      transition: transform 0.2s ease-in-out;
+      transform-origin: center;
+      vertical-align: middle;
+    }
+  }
+
+  &[open] > summary::after { // Target ::after
+    transform: rotate(90deg);
+  }
+}
+*/

@@ -19,7 +19,7 @@
 body {
   font-family: "Space Grotesk", "IBM Plex Sans", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .bi {
@@ -186,7 +186,7 @@ strong {
 }
 
 .post-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 900;
 }
 
@@ -344,7 +344,7 @@ td a {
 code {
   font-family: Iosevka, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   background: $code-dark-bg;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: $foreground;
   border-radius: 1px;
 
@@ -394,7 +394,7 @@ pre {
 
 
   code {
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     @media (prefers-color-scheme: dark) {
       color: $foreground;
@@ -420,7 +420,7 @@ pre {
 
 blockquote {
   color: $drac-quote;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 
   @media (prefers-color-scheme: dark) {
     color: $drac-quote;
@@ -607,7 +607,7 @@ pre[class*="language-"] {
   text-shadow: none;
   font-family: Iosevka, PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     monospace;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
