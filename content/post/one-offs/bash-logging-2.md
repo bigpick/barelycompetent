@@ -47,7 +47,7 @@ like so:
 
 #### Example 1
 
-To import some constants in `scripts/git.sh` from `scripts/constanst.sh`:
+To import some constants in `scripts/git.sh` from `scripts/constants.sh`:
 
 ```bash
 #!/usr/bin/env bash

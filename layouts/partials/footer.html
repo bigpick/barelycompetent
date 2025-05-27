@@ -21,5 +21,12 @@
             <span style="display:block;color:#ff5555;">{{ .Site.Params.footerBottom | default "" | safeHTML }}</span>
         </div>
     </div>
+    <style id="inlined-light-theme-styles" media="all and (prefers-color-scheme: light)">
+      {{ partial "css/rose_pine_dawn_light.css" . | safeCSS }}
+    </style>
+    <style id="inlined-dark-theme-styles" media="all and (prefers-color-scheme: dark)">
+      {{ partial "css/dracula_syntax.css" . | safeCSS }}
+    </style>
+
 </footer>
 {{ end }}

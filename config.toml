@@ -3,8 +3,9 @@ title   = "Barely Competent Dev"
 languageCode = "en-us"
 theme = ["hugo-admonitions", "hello-friend-ng", "hugo-shortcode-gallery"]
 
-pygmentsCodefences = true
-pygmentsUseClasses = true
+#pygmentsUseClassic = false
+#pygmentsCodefences = true
+#pygmentsUseClasses = false
 
 ignorefiles = ["styles/*"]
 
@@ -63,6 +64,7 @@ disableHugoGeneratorInject = false
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
   enableThemeToggle = true
+  useChroma = true
 
   # Metadata mostly used in document's head
   description = "Stumbling through code, one line at a time..."
@@ -191,6 +193,10 @@ disableHugoGeneratorInject = false
     weight     = 20
 
 [markup]
+ [markup.highlight]
+  style = 'dracula'
+  noClasses = false #true
+
   [markup.tableOfContents]
     endLevel = 5
     ordered = false

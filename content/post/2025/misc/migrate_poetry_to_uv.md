@@ -37,7 +37,7 @@ Follow [uv's documentation](https://docs.astral.sh/uv/getting-started/installati
 I am doing so on mac, so will use brew:
 
 ```bash
-brew install mac
+brew install uv
 ```
 
 This gives us `uv` and `uvx`:

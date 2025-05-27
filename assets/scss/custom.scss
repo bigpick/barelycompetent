@@ -13,9 +13,6 @@
 @import "./post";
 @import "./fixed_sidebar";
 
-@import "./dracula_syntax";
-
-
 body {
   font-family: "Space Grotesk", "IBM Plex Sans", 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -341,26 +338,30 @@ td a {
 }
 
 /* Code font */
+//:not(language-text).code {
 code {
   font-family: Iosevka, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-  background: $code-dark-bg;
-  font-size: 1.1rem;
-  color: $foreground;
-  border-radius: 1px;
+  font-size: 1rem;
+}
+
+:not(pre) > code {
+  font-family: Iosevka, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  font-size: 1rem;
+  border-radius: 2px;
 
   @media (prefers-color-scheme: dark) {
-    color: $foreground;
-    background: $code-dark-bg;
-  }
-
-  @media (prefers-color-scheme: light) {
-    color: $foreground;
-    background: $code-dark-bg;
+    color: #BD93F9;
+    background: rgba(#BD93F9, .2);
   }
 
   [data-theme=dark] & {
     color: #BD93F9;
     background: rgba(#BD93F9, .2);
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $code-dark-bg;
+    background: rgba($code-dark-bg, .15);
   }
 
   [data-theme=light] & {
@@ -370,53 +371,71 @@ code {
 }
 
 pre {
-  background: $code-dark-bg;
-
-  [data-theme=dark] & {
-    color: $foreground;
-    background: $code-dark-bg;
-  }
-
-  [data-theme=light] & {
-    color: $foreground;
-    background: $code-dark-bg;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: $foreground;
-    background: $code-dark-bg;
-  }
-
-  @media (prefers-color-scheme: light) {
-    color: $foreground;
-    background: $code-dark-bg;
-  }
-
-
-  code {
-    font-size: 1rem;
-
-    @media (prefers-color-scheme: dark) {
-      color: $foreground;
-      background: $code-dark-bg;
-    }
-
-    @media (prefers-color-scheme: light) {
-      color: $foreground;
-      background: $code-dark-bg;
-    }
-
-    [data-theme=dark] & {
-      color: $foreground;
-      background: $code-dark-bg;
-    }
-
-    [data-theme=light] & {
-      color: $foreground;
-      // background: $code-dark-bg;
-    }
-  }
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: Iosevka, PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
+
+// pre {
+//   code {
+//     background: $code-dark-bg;
+//   }
+// }
+
+  // [data-theme=dark] & {
+  //   color: $foreground;
+  //   background: $code-dark-bg;
+  // }
+
+  // [data-theme=light] & {
+  //   color: $foreground;
+  //   background: $code-dark-bg;
+  // }
+
+  // @media (prefers-color-scheme: dark) {
+  //   color: $foreground;
+  //   background: $code-dark-bg;
+  // }
+
+  // @media (prefers-color-scheme: light) {
+  //   color: $foreground;
+  //   background: $code-dark-bg;
+  // }
+
+
+// //pre {
+// //  code {
+// //    [data-theme=light] & {
+// //      color: $foreground;
+// //    }
+// //    @media (prefers-color-scheme: light) {
+// //      color: $foreground;
+// //    }
+// //  }
+// //}
+  //   font-size: 1rem;
+
+  //   @media (prefers-color-scheme: dark) {
+  //     color: $foreground;
+  //     background: $code-dark-bg;
+  //   }
+
+  //   @media (prefers-color-scheme: light) {
+  //     color: $foreground;
+  //     background: $code-dark-bg;
+  //   }
+
+  //   [data-theme=dark] & {
+  //     color: $foreground;
+  //     background: $code-dark-bg;
+  //   }
+
+  //   [data-theme=light] & {
+  //     color: $foreground;
+  //     // background: $code-dark-bg;
+  //   }
+  // }
+//}
 
 blockquote {
   color: $drac-quote;
@@ -599,7 +618,8 @@ pre::-webkit-scrollbar-thumb {
 
 //.chroma .lntd {
 //  line-height: 1.5rem !important;
-//  font-size: 1.1rem !important;
+//  font-size: 1rem !important;
+//  font-family: Iosevka, PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 //}
 
 code[class*="language-"],
