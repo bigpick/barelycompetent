@@ -5,9 +5,7 @@ date: 2020-11-18T09:22:39-05:00
 toc: false
 ---
 
-Nice to meet you; You can call me GP.
-
-Currently I write software at [IBM](https://www.ibm.com).
+Nice to meet you! I write software.
 
 I try to spend as much of my free time doing something productive, like
 practicing a new programming language or reading up on industry best
@@ -19,7 +17,7 @@ card, I would not turn it down :).
 
 ## Work
 
-I work on a team designing, building, and maintaining Big
+I've spent most of my career working on a team designing, building, and maintaining Big
 Data platforms. These platforms are being used to deliver corporation
 wide insights and analytics with direct executive management visibility.
 
@@ -79,7 +77,7 @@ IDE/development purposes.
 
 ## Career
 
- * May 2022 - Present
+ * May 2022 - October 2025
    * Senior Backend Software Engineer @ [IBM](https://www.ibm.com/us-en/?ar=1)
  * March 2021 - Present
    * Advisory Software Engineer @ [IBM](https://www.ibm.com/us-en/?ar=1)
@@ -89,7 +87,3 @@ IDE/development purposes.
    * Software Engineer @ [IBM](https://www.ibm.com/us-en/?ar=1)
  * June 2017 - August 2017
    * Integration Research Intern @ [IBM](https://www.ibm.com/us-en/?ar=1)
-
-## Education
-
- * BS in Computer Science @ [Clarkson University](https://www.clarkson.edu/)
