@@ -5,81 +5,88 @@ date: 2020-11-18T09:22:39-05:00
 toc: false
 ---
 
-Nice to meet you! I write software.
+Nice to meet you, I'm GP. I build software, own the toolchains that ship it, and
+spend my off-hours breaking things I'm allowed to break.
 
-I try to spend as much of my free time doing something productive, like
-practicing a new programming language or reading up on industry best
-practices.
+Somewhere between "barelycompetent" and the engineer his org trusts to own its
+entire build and delivery pipeline. That's roughly where I live.
 
-If I'm not being productive, my preferred means of lounging is playing
-video games; If a kind donor wanted to bestow me a new next gen graphics
-card, I would not turn it down :).
+## Engineering & platforms
 
-## Work
+These days I'm a Senior Platform Engineer for DevSecOps and CI/CD at
+[RTX](https://www.rtx.com), which is really just the job title for the throughline
+of my whole career: owning the toolchains that get software built, tested, and
+shipped safely.
 
-I've spent most of my career working on a team designing, building, and maintaining Big
-Data platforms. These platforms are being used to deliver corporation
-wide insights and analytics with direct executive management visibility.
+Before that I spent the better part of a decade at IBM shipping software across a
+wide stack, from HPC to cloud services to Big Data platforms that delivered
+corporation-wide insights and analytics with direct executive visibility. But the
+work I'm proudest of is the plumbing underneath it. I designed, built, and owned
+my org's entire DevSecOps toolchain: the CI/CD paradigms, the infrastructure, the
+shared library of sane, tested build-and-delivery code, and the tooling that
+stitched it all together, scaling it from individual teams up to
+multi-thousand-user, full-scale organizations. When something needed to build,
+test, and ship consistently and safely, that was mine, end to end.
 
-My focus recently has been on the operationalization of the stack,
-focusing more on building a shared library of sane, tested code and
-scripts geared towards consistent building and delivery of all possible
-service code.
+Earlier on, I helped deliver and publicly launch IBM's Next-Generation Hybrid
+Cloud in its first location, then rolled onward to dozens more across the globe
+personally writing the very tooling used in every single deployment.
 
-I have also been heavily focused on owning, desiging, implementing, and
-maintaining our entire org's CI/CD approach, including the paradigms,
-infrastructure, scripts, tools, and all other required pieces.
+## Code
 
-Previously, I worked on a different team to help help deliver and
-publicly launch IBM's Next Generation Hybrid Cloud in it's first
-location, and then onwards to many more.
+Designing and building platforms is what I do; programming is how I support it
+once the architecture is set. I own both layers. I design and build the pipelines,
+then turn around and write the applications that run on top of them, which I'm
+reliably assured is the sort of thing a 10x engineer does.
 
-In my day-day, I do a lot of work in scripting languages (Python,
-Bash), but also write applications, which are usually in either
-Python, Scala, or Golang; In personal time, I enjoy using all those
-previously mentioned, along with currently learning
-[Rust](https://www.rust-lang.org/). Python is by far my most used, but
-I've at least dabbled in many well known languages beyond those
-mentioned above... and like to think I can pick up any required new
-one rather quick.
+Day to day I live in Python (my most-used by a wide margin) and Bash, and I write
+applications in Python, Scala, and Golang. Beyond those I've dabbled in Rust,
+Ruby, and plenty of other random languages as needed, leaning on foundational
+knowledge to get up to speed on a new one quickly.
 
 Neovim is my editor and IDE of choice.
 
-## Fun
+## Security
 
-I enjoy trying to crack passwords (only recreationally, for educational
-purposes), playing around on TryHackMe or HackTheBox, or competing
-with my team [burner_herz0g](https://ctftime.org/team/63292) on
-capture the flag/cybersecurity events.
+My favorite way to spend a weekend is offensive security. I play the full
+adversarial game (recon, exploitation, privilege escalation, and cracking) on
+TryHackMe, HackTheBox, and the CTF circuit with my team
+[burner_herz0g](https://ctftime.org/team/63292).
+
+Password cracking is where I go deepest. I've competed in KoreLogic's
+[Crack Me If You Can](https://contest.korelogic.com/), the premier annual
+password-cracking contest, every year since 2020, and in 2024 I took first place
+in the non-professional division. Now if only someone wanted to lend me a few
+dozen GPUs...
 
 ## Defcon
 
-Every year my colleagues and I take a week in August to work together
-on various events at the annual [Defcon](https://defcon.org/)
-conference. Our team has taken a step back this past year or so, so my
-contributions (and writeups) have stopped, but I'm making a
-concentrated effort to get back into things at the end of 2022.
+Every August my colleagues and I take a week to go compete together at
+[Defcon](https://defcon.org/). The team stepped back for a stretch, so the
+writeups went quiet, but getting back into the events is firmly on the list.
 
-My personal favorite is participating in the "premier annual password
-cracking contest", [Crack Me If You Can](https://contest.korelogic.com/),
-put on by KoreLogic. I've played since 2020, and each year have learned
-and improved on the last one. Now if only someone wanted to give me a
-few dozen GPUs...
+## Off the clock
+
+When I'm not being productive, I'm a devoted gamer and into fitness. My preferred
+way to lounge is video games, and if a kind donor ever wanted to bestow a next-gen
+graphics card (that could, hypothetically, also crack a hash or two), I would not
+turn it down. :)
 
 ## This site
 
-I implemented this website using a custom [dracula](https://draculatheme.com/)
-theme, but prefer using [Tokyonight](https://github.com/folke/tokyonight.nvim)
-or [Kanagawa](https://github.com/rebelot/kanagawa.nvim) for all
-IDE/development purposes.
+Built with a custom [dracula](https://draculatheme.com/) theme, though I reach for
+[Tokyonight](https://github.com/folke/tokyonight.nvim) or
+[Kanagawa](https://github.com/rebelot/kanagawa.nvim) for actual development.
 
 ---
 
 ## Career
 
- * May 2022 - October 2025
+ * December 2025 - Present
+   * Senior Platform Engineer - DevSecOps, CI/CD @ [RTX](https://www.rtx.com)
+ * May 2022 - August 2025
    * Senior Backend Software Engineer @ [IBM](https://www.ibm.com/us-en/?ar=1)
- * March 2021 - Present
+ * March 2021 - May 2022
    * Advisory Software Engineer @ [IBM](https://www.ibm.com/us-en/?ar=1)
  * September 2019 - March 2021
    * Staff Software Engineer @ [IBM](https://www.ibm.com/us-en/?ar=1)
